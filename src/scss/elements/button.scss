@@ -150,6 +150,16 @@ $button-icon-size:  3em !default;
   }
 
 
+  // Color: Disabled
+
+  &.is-disabled {
+    color: #999;
+    background-color: $base-color-light;
+    border-color: $base-color-border;
+    cursor: not-allowed;
+  }
+
+
   // Type: Icon
 
   &.is-icon {

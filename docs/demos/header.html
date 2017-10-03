@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test: Header</title>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/uny.css">
+  <style>
+    body { background-color: #f2f2f2; }
+  </style>
+</head>
+<body>
+
+  <header class="header is-sticky">
+    <h1 class="logo is-small">Logo</h1>
+    <p>Lorem ipsum dolor sit amet.</p>
+  </header>
+
+  <div style="padding-top:8rem;">
+
+    <header class="header">
+      <h1 class="logo is-small">Logo</h1>
+      <p>Lorem ipsum dolor sit amet.</p>
+    </header>
+
+    <header class="header">
+      <h1 class="logo is-small">Logo</h1>
+      <div class="header-menu">
+        <a href="#" class="is-current">Menu1</a>
+        <a href="#">Menu2</a>
+        <a href="#">Menu3</a>
+        <a href="#">Menu4</a>
+      </div>
+    </header>
+
+    <header class="header">
+      <h1 class="logo is-small">Logo</h1>
+      <div class="header-menu">
+        <a href="#" class="is-current">Menu1</a>
+        <a href="#">Menu2</a>
+        <a href="#">Menu3</a>
+        <a href="#">Menu4</a>
+      </div>
+      <button class="button is-burger offcanvas-open">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+
+    <header class="header">
+      <h1 class="logo is-small">Logo</h1>
+      <form class="hide-on-small" action="#" style="margin-right:auto;margin-left:3rem">
+        <input type="text" class="input" placeholder="Search">
+      </form>
+      <div class="header-menu" style="margin-right:3rem;margin-left:auto">
+        <a href="#" class="is-current">Menu1</a>
+        <a href="#">Menu2</a>
+        <a href="#">Menu3</a>
+        <div class="pulldown">
+          <a href="#">Menu4 <i class="fa fa-angle-down"></i></a>
+          <div class="pulldown-content">
+            <a href="#" class="button is-list">List1</a>
+            <a href="#" class="button is-list">List2</a>
+            <a href="#" class="button is-list">List3</a>
+          </div>
+        </div>
+        <a class="button is-small is-white" href="#">Button1</a>
+        <a class="button is-small" href="#">Button2</a>
+      </div>
+      <button class="button is-burger offcanvas-open">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+
+    <div class="offcanvas">
+      <div class="offcanvas-overlay offcanvas-close"></div>
+      <div class="offcanvas-content">
+        <button class="button is-close offcanvas-close">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="inner">
+          <div class="offcanvas-menu">
+            <a href="#" class="is-current">Menu1</a>
+            <a href="#">Menu2</a>
+            <a href="#">Menu3</a>
+            <a href="#">Menu4</a>
+          </div>
+          <hr>
+          <a href="#" class="button">Button</a>
+          <hr>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, odio.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="../js/uny.js"></script>
+</body>
+</html>

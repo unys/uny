@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>UNY - A modern CSS framework</title>
-  <meta name="description" content="UNY is CSS framework with a modern atmosphere.">
+  <title>UNY - それは、イマドキなCSSフレームワーク。</title>
+  <meta name="description" content="UNYはモダンな雰囲気のCSSフレームワークです。カードやボタンなど基本的なコンポーネントに加え、テーマファイルによる拡張も可能です。">
   <meta name="author" content="kokushin">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-  <link rel="stylesheet" href="/css/uny.css">
+  <link rel="stylesheet" href="./css/uny.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github-gist.min.css" rel="stylesheet">
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
@@ -40,22 +40,54 @@
   </style>
 </head>
 <body>
+  <div class="offcanvas">
+    <div class="offcanvas-overlay offcanvas-close"></div>
+    <div class="offcanvas-content">
+      <button class="button is-close offcanvas-close">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="inner">
+        <div class="offcanvas-menu">
+          <a href="./">English</a>
+          <a class="is-current" href="./index_ja.html">日本語</a>
+          <hr>
+          <a href="https://github.com/unys/uny" class="button is-white is-small"><i class="fa fa-github"></i> GitHub</a>
+          <a href="https://github.com/unys/uny/archive/master.zip" class="button is-small"><i class="fa fa-download"></i> ダウンロード</a>
+          <hr>
+          <p>バージョン 0.1-ベータ版</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <header class="header is-sticky">
     <h1 class="logo is-medium">UNY</h1>
     <nav class="header-menu">
-      <a href="/" class="is-current">Introduction</a>
       <div class="pulldown">
-        <a href="javascript:void(0);">Document <i class="fa fa-angle-down"></i></a>
+        <a href="javascript:void(0);">言語 <i class="fa fa-angle-down"></i></a>
         <div class="pulldown-content">
-          <a href="./index_en.html" class="button is-list">English</a>
-          <a href="./" class="button is-list">日本語</a>
+          <a href="./" class="button is-list">English</a>
+          <a href="./index_ja.html" class="button is-list">日本語</a>
         </div>
       </div>
-      <a href="/themes">Themes</a>
-      <a href="#" class="button is-white is-small"><i class="fa fa-github"></i> GitHub</a>
-      <a href="#" class="button is-small"><i class="fa fa-download"></i> Download</a>
+      <div class="pulldown">
+        <a href="javascript:void(0);">ドキュメント</a>
+        <div class="pulldown-content">
+          <p>準備中</p>
+        </div>
+      </div>
+      <div class="pulldown">
+        <a href="javascript:void(0);">拡張テーマ</a>
+        <div class="pulldown-content">
+          <p>準備中</p>
+        </div>
+      </div>
+      <a href="https://github.com/unys/uny" class="button is-white is-small"><i class="fa fa-github"></i> GitHub</a>
+      <a href="https://github.com/unys/uny/archive/master.zip" class="button is-small"><i class="fa fa-download"></i> ダウンロード</a>
     </nav>
-    <button class="button is-burger hide-on-medium hide-on-large hide-on-xlarge">
+    <button class="button is-burger hide-on-medium hide-on-large offcanvas-open">
       <span></span>
       <span></span>
       <span></span>
@@ -64,22 +96,20 @@
 
   <div class="hero is-center is-gradation">
     <div class="uny-logo"></div>
-    <div class="type-h1">It's modern CSS framework.</div>
-    <p>UNY is a simple CSS framework. In addition to the basic components such as cards and buttons, <br>it is also possible to extend theme files.</p>
-    <p>
-      <a href="#" class="button is-white"><i class="fa fa-book"></i> Learn more</a>
-    </p>
+    <div class="type-h1">It's modern CSS framework. <small>Beta</small></div>
+    <p>UNYはシンプルなCSSフレームワークです。<br>カードやボタンなど基本的なコンポーネントに加え、テーマファイルによる拡張も可能です。</p>
+    <p><a href="./demos/" class="button is-white is-medium"><i class="fa fa-arrow-right"></i> デモを見る</a></p>
   </div>
 
   <main class="main">
     <div class="content">
       <section class="section">
         <div class="inner is-small">
-          <h2><i class="fa fa-check"></i> Feature</h2>
-          <h3>Various components</h3>
-          <p>I will show you some of the components that can be expressed in UNY. <br>Various things such as buttons and form parts that can be used by itself, things such as lists and cards that can be used as a set.</p>
-          <h4>Button</h4>
-          <div class="grid is-center is-middle">
+          <h2><i class="fa fa-check"></i> 主な特徴</h2>
+          <h3>多彩なコンポーネント</h3>
+          <p>UNYで表現可能なコンポーネントの一部をお見せします。<br> ボタンやフォーム部品など単体で利用できるものから、リストやカードなどセットで利用できるものなど様々です。</p>
+          <h4>ボタン</h4>
+          <div class="grid is-col-center is-row-middle">
             <div>
               <a href="#" class="button">Button</a>
             </div>
@@ -99,8 +129,8 @@
               <a href="#" class="button is-round"><i class="fa fa-plus"></i></a>
             </div>
           </div>
-          <h4>Form parts</h4>
-          <div class="grid is-center is-middle">
+          <h4>フォーム部品</h4>
+          <div class="grid is-col-center is-row-middle">
             <div>
               <input class="input" type="text" placeholder="text">
             </div>
@@ -123,7 +153,7 @@
               </label>
             </div>
           </div>
-          <h4>Tree type list, Card</h4>
+          <h4>ツリー型リスト、カード</h4>
           <div class="grid is-col-medium-2 is-center is-middle">
             <div>
               <div class="tree">
@@ -154,39 +184,47 @@
         </div>
       </section>
 
+      <section class="section is-center is-gradation">
+        <div class="inner">
+          <h2>もっと見る</h2>
+          <p>バージョン0.1(ベータ版)時点での全てのコンポーネントを確認したい場合は、<br>以下のページを参照してください。</p>
+          <p><a href="./demos/" class="button is-ghost is-medium"><i class="fa fa-arrow-right"></i> デモを見る</a></p>
+        </div>
+      </section>
+
       <section class="section">
         <div class="inner is-small">
-          <h2><i class="fa fa-bolt"></i> Quick start</h2>
-          <h3>Using CDN</h3>
-          <p>In addition to downloading and loading CSS and JS files, <br>you can easily start by using CDN.</p>
-          <p>Add the following description in the <code>&lt;head&gt;</code> tag of the web page you want to use UNY.</p>
+          <h2><i class="fa fa-bolt"></i> クイックスタート</h2>
+          <h3>CDNの利用</h3>
+          <p>ダウンロードしてCSS、JSファイルを読み込ませる方法以外にも、<br>CDNを利用することで簡単に始めることができます。</p>
+          <p>UNYを利用したいWebページの <code>&lt;head&gt;</code> タグ内に下記の記述を追記します。</p>
           <pre><code class="html">&lt;link rel="stylesheet" href="https://unpkg.com/uny@latest/dist/uny.min.css"&gt;
 &lt;script src="https://unpkg.com/uny@latest/dist/uny.min.js"&gt;&lt;/script&gt;</code></pre>
-          <p>Write the HTML tag of the component you want to use.</p>
+          <p>利用したいコンポーネントのHTMLタグを記述します。</p>
           <pre><code class="html">&lt;div class="card"&gt;
   &lt;div class="card-image" style="background-image: url(https://source.unsplash.com/random);"&gt;&lt;/div&gt;
   &lt;h3&gt;Heading&lt;/h3&gt;
   &lt;p&gt;Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae, debitis.&lt;/p&gt;
   &lt;p&gt;&lt;a href="#" class="button"&gt;Download&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;</code></pre>
-          <p>This alone displays the card type component with the image embedded 🎉</p>
+          <p>これだけで、画像が埋め込まれたカード型のコンポーネントが表示されます 🎉</p>
         </div>
       </section>
 
       <section class="section">
         <div class="inner is-small">
-          <h2><i class="fa fa-book"></i> Document</h2>
-          <p>Usage, introduction of other functions, component introduction etc. <br>are described in detail in the document. <br>Two kinds of documents are prepared, English and Japanese.</p>
-          <p><a href="#" class="button"><i class="fa fa-book"></i> Read document (en)</a></p>
+          <h2><i class="fa fa-book"></i> ドキュメント</h2>
+          <p>使い方、その他の機能紹介、コンポーネント紹介などはドキュメントに詳しく記載されています。<br>ドキュメントは英語、日本語の2種類が用意されています。</p>
+          <p><a href="#" class="button is-disabled"><i class="fa fa-book"></i> 準備中</a></p>
         </div>
       </section>
 
       <section class="section">
         <div class="inner is-small">
           <h2><i class="fa fa-github"></i> View on GitHub</h2>
-          <p>UNY was developed by <a href="https://twitter.com/kokushing">@kokushing</a> and is open source (MIT license) on GitHub.<br>Please send us feedback, requests, bug reports and pull requests!</p>
-          <p>If you like it, please press Star ;)</p>
-          <p><a href="#" class="button"><i class="fa fa-github"></i> GitHub page</a></p>
+          <p>UNYは <a href="https://twitter.com/kokushing">@kokushing</a> によって開発され、GitHub上にオープンソース（MITライセンス）で公開されています。<br>ご意見・ご要望、バグ報告やプルリクエストをぜひお寄せください！</p>
+          <p>Starを頂けるとやる気に繋がります ;)</p>
+          <p><a href="https://github.com/unys/uny" class="button"><i class="fa fa-github"></i> GitHubページへ移動する</a></p>
         </div>
       </section>
     </div>
@@ -194,13 +232,15 @@
 
   <footer class="footer">
     <div class="inner">
-      <div class="logo is-medium">UNY</div>
+      <div class="logo is-medium">UNY <small>Beta</small></div>
       <div class="margin-left-small margin-right-small">
-        <p>A modern CSS framework. <br>UNY is provided with <a href="#">MIT license.</a> Made by @kokushin &hearts; OSS</p>
+        <p>A modern CSS framework. <br>UNY is provided with <a href="https://github.com/unys/uny/blob/master/LICENSE">MIT license.</a> Made by @kokushin &hearts; OSS</p>
         <p>Icon fonts by Font Awesome, Photo by Unsplash</p>
       </div>
       <small class="copyright">&copy; 2017 UNY</small>
     </div>
   </footer>
+
+  <script src="./js/uny.js"></script>
 </body>
 </html>

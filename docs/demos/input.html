@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test: Input</title>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/uny.css">
+  <style>
+    /* for Font Awesome */
+    .fa {
+      margin-right: .25em;
+    }
+  </style>
+</head>
+<body>
+  <main class="main">
+    <div class="content">
+      <div class="section">
+
+        <div class="box">
+          <input type="text" class="input" placeholder="text">
+        </div>
+
+        <div class="box">
+          <input type="text" class="input is-col-full" placeholder="text">
+        </div>
+
+        <div class="box">
+          <label for="label" class="label">Label</label>
+          <input type="text" class="input is-col-full" id="label" placeholder="text">
+        </div>
+
+        <div class="box">
+          <label for="checkbox-1" class="input is-checkbox">
+            <input type="checkbox" id="checkbox-1">
+            <span>Checkbox</span>
+          </label>
+          <label for="checkbox-2" class="input is-checkbox">
+            <input type="checkbox" id="checkbox-2">
+            <span>Checkbox</span>
+          </label>
+          <label for="checkbox-3" class="input is-checkbox">
+            <input type="checkbox" id="checkbox-3">
+            <span>Checkbox</span>
+          </label>
+        </div>
+
+        <div class="box">
+          <label for="radio-1" class="input is-radio">
+            <input type="radio" name="radio" id="radio-1">
+            <span>Radio button 1</span>
+          </label>
+          <label for="radio-2" class="input is-radio">
+            <input type="radio" name="radio" id="radio-2">
+            <span>Radio button 2</span>
+          </label>
+          <label for="radio-3" class="input is-radio">
+            <input type="radio" name="radio" id="radio-3">
+            <span>Radio button 3</span>
+          </label>
+        </div>
+
+        <div class="box">
+          <label for="select" class="input is-select">
+            <select id="select">
+              <option value="#">Option1</option>
+              <option value="#">Option2</option>
+              <option value="#">Option3</option>
+              <optgroup label="Optgroup">
+                <option value="#">Option4</option>
+                <option value="#">Option5</option>
+                <option value="#">Option6</option>
+              </optgroup>
+            </select>
+          </label>
+        </div>
+
+        <div class="box">
+          <label for="file" class="input is-file">
+            <input type="file" id="file">
+            <span><i class="fa fa-cloud-upload"></i> Upload files</span>
+          </label>
+        </div>
+
+        <div class="box">
+          <textarea class="input is-textarea" placeholder="textarea"></textarea>
+        </div>
+
+        <div class="box">
+          <textarea class="input is-textarea is-col-full" placeholder="textarea"></textarea>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

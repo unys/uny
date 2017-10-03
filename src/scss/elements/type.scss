@@ -130,22 +130,4 @@ h6,
       margin-top: 3.75rem;
     }
   }
-
-  &:before {
-    content: " ";
-    display: block;
-    height: 3.75rem;
-    margin-top: -3.75rem;
-    visibility: hidden;
-
-    @include screen-medium() {
-      height: 4.25rem;
-      margin-top: -4.25rem;
-    }
-
-    @include screen-medium() {
-      height: 4.75rem;
-      margin-top: -4.75rem;
-    }
-  }
 }
