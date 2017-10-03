@@ -32,8 +32,8 @@ In addition to downloading and loading CSS and JS files, you can easily start by
 Add the following description in the `<head>` tag of the web page you want to use UNY.
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/uny@latest/dist/uny.min.css">
-<script src="https://unpkg.com/uny@latest/dist/uny.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/uny@latest/dist/css/uny.min.css">
+<script src="https://unpkg.com/uny@latest/dist/js/uny.min.js"></script>
 ```
 
 Write the HTML tag of the component you want to use.
