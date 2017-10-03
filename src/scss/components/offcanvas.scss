@@ -11,18 +11,11 @@ $offcanvas-color-background: #fff !default;
 
 
 .offcanvas {
-  display: none;
   position: relative;
   z-index: 5;
-
-  &.is-active {
-    display: block;
-    overflow: hidden;
-  }
 }
 
 .offcanvas-content {
-  display: none;
   background-color: $offcanvas-color-background;
   box-shadow: $base-shadow;
   position: fixed;
@@ -33,12 +26,11 @@ $offcanvas-color-background: #fff !default;
   height: 100%;
   -webkit-overflow-scrolling: touch;
   overflow-y: scroll;
-  // transform: translate3d($offcanvas-width, 0, 0);
-  // transition: .35s all cubic-bezier(0.165, 0.840, 0.440, 1.000);
+  transform: translate3d($offcanvas-width, 0, 0);
+  transition: .35s all cubic-bezier(0.165, 0.840, 0.440, 1.000);
 
   .is-active & {
-    display: block;
-    // transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
 
   > .inner {
@@ -55,21 +47,19 @@ $offcanvas-color-background: #fff !default;
 
 
 .offcanvas-overlay {
-  // visibility: hidden;
-  // opacity: 0;
-  display: none;
+  visibility: hidden;
+  opacity: 0;
   position: fixed;
   top: 0;
   left: 0;
   background-color: color(#000 a(.5));
   width: 100%;
   height: 100%;
-  // transition: .35s all cubic-bezier(0.165, 0.840, 0.440, 1.000);
+  transition: .35s all ease;
 
   .is-active & {
-    display: block;
-    // visibility: visible;
-    // opacity: 1;
+    visibility: visible;
+    opacity: 1;
   }
 }
 
