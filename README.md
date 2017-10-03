@@ -1,6 +1,6 @@
 # Uny
 
-A modern CSS framework.
+A modern CSS framework. (Beta)
 
 ![Uny](https://avatars1.githubusercontent.com/u/32477068?v=4&s=320)
 
