@@ -24,6 +24,7 @@
     "css-mqpacker": "^6.0.1",
     "cssnano": "^3.10.0",
     "http-server": "^0.10.0",
+    "np": "^2.16.0",
     "opener": "^1.4.3",
     "postcss": "^6.0.10",
     "postcss-advanced-variables": "^1.2.2",
