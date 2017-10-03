@@ -1,0 +1,42 @@
+//
+// Table
+// -----------------------------------
+
+
+table {
+  width: 100%;
+
+  &:not(:first-child) {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    @include screen-medium() {
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+    }
+  }
+
+  caption {
+    font-size: $base-font-size-large;
+    margin-bottom: 1.25rem;
+    text-align: left;
+  }
+}
+
+tr {
+  &:nth-child(even) {
+    td {
+      background-color: $base-color-light;
+    }
+  }
+}
+
+th,
+td {
+  padding: 1rem;
+}
+
+th {
+  border-top: 1px solid $base-color-border;
+  border-bottom: 1px solid $base-color-border;
+}
