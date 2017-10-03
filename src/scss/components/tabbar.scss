@@ -1,0 +1,46 @@
+//
+// Tabbar
+// -----------------------------------
+
+
+$tabbar-min-height:        3.75rem !default;
+$tabbar-min-height-medium: 4.25rem !default;
+$tabbar-min-height-large:  4.75rem !default;
+$tabbar-shadow:            $base-shadow !default;
+$tabbar-color-default:     #fff !default;
+
+
+.tabbar {
+  min-height: $tabbar-min-height;
+  box-shadow: $tabbar-shadow;
+  background-color: $tabbar-color-default;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 5;
+
+  @include screen-medium() {
+    min-height: $tabbar-min-height-medium;
+    padding: $tabbar-margin-medium;
+  }
+
+  @include screen-large() {
+    min-height: $tabbar-min-height-large;
+    padding: $tabbar-margin-large;
+  }
+
+  > .inner {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .button {
+    margin: 0;
+  }
+}

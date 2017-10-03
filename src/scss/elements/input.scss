@@ -1,0 +1,238 @@
+//
+// Input
+// -----------------------------------
+
+
+$input-padding:            .5rem .75rem !default;
+$input-shadow-focus:       0 0 4px $base-color-link !default;
+$input-border:             1px solid $base-color-button-border !default;
+$input-border-radius:      $base-border-radius-small !default;
+$input-border-color-hover: color(#000 a(.3)) !default;
+
+$input-textarea-min-width: 20rem !default;
+$input-textarea-min-height: 6.25rem !default;
+
+
+@mixin input() {
+  display: inline-block;
+  letter-spacing: normal;
+  font-weight: $base-font-weight-medium;
+  font-size: $base-font-size;
+  border: $input-border;
+  border-radius: $input-border-radius;
+
+  &:hover {
+    border-color: $input-border-color-hover;
+  }
+
+  &:focus {
+    @include button-focus();
+  }
+}
+
+
+.input {
+  & + .input {
+    margin-left: 1.5rem;
+  }
+
+  &:not(label) {
+    @include input();
+    padding: $input-padding;
+  }
+
+
+  // Checkbox
+
+  &.is-checkbox {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover {
+      > span {
+        &:before {
+          border-color: $input-border-color-hover;
+        }
+      }
+    }
+
+    > span {
+      display: inline-flex;
+      align-items: center;
+      position: relative;
+
+      &:before {
+        content: " ";
+        display: block;
+        width: 1.125rem;
+        height: 1.125rem;
+        border: 1px solid $base-color-button-border;
+        border-radius: $input-border-radius;
+        margin-right: .5rem;
+      }
+    }
+
+    > input[type=checkbox] {
+      @include hide();
+
+      &:checked {
+        & + span {
+          &:before {
+            background-color: $base-color-brand;
+            border-color: $base-color-brand;
+            @include button-active();
+          }
+
+          &:after {
+            content: " ";
+            position: absolute;
+            top: .375rem;
+            left: .375rem;
+            width: 6px;
+            height: 10px;
+            background-color: transparent;
+            border-bottom: 2px solid #fff;
+            border-right: 2px solid #fff;
+            transform: rotate(45deg);
+          }
+        }
+      }
+    }
+  }
+
+
+  // Radio button
+
+  &.is-radio {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover {
+      > span {
+        &:before {
+          border-color: $input-border-color-hover;
+        }
+      }
+    }
+
+    > span {
+      display: inline-flex;
+      align-items: center;
+      position: relative;
+
+      &:before {
+        content: " ";
+        display: block;
+        width: 1.125rem;
+        height: 1.125rem;
+        border: 1px solid $base-color-button-border;
+        border-radius: 50%;
+        margin-right: .5rem;
+      }
+    }
+
+    > input[type=radio] {
+      @include hide();
+
+      &:checked {
+        & + span {
+          &:before {
+            background-color: $base-color-brand;
+            border-color: $base-color-brand;
+            @include button-active();
+          }
+
+          &:after {
+            content: " ";
+            position: absolute;
+            top: 50%;
+            left: .3125rem;
+            width: .5rem;
+            height: .5rem;
+            background-color: #fff;
+            border-radius: 50%;
+            margin-top: -.25rem;
+          }
+        }
+      }
+    }
+  }
+
+
+  // Selectbox
+
+  &.is-select {
+    position: relative;
+    display: inline-block;
+    background-color: #fff;
+
+    &:after {
+      content: "...";
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: .875rem;
+      margin-top: -1rem;
+    }
+
+    > select {
+      @include input();
+      width: 100%;
+      min-height: 2.625rem;
+      padding: .5rem 2.5rem .5rem 1.25rem;
+      background-color: transparent;
+      position: relative;
+      z-index: 1;
+      cursor: pointer;
+    }
+  }
+
+
+  // File button
+
+  &.is-file {
+    @include input();
+    min-height: 2.625rem;
+    padding: .5rem 1.25rem;
+    cursor: pointer;
+
+    &:active {
+      @include button-active();
+    }
+
+    input[type=file] {
+      @include hide();
+    }
+  }
+
+
+  // Textarea
+
+  &.is-textarea {
+    resize: none;
+    border-radius: $input-border-radius;
+    min-width: $input-textarea-min-width;
+    min-height: $input-textarea-min-height;
+  }
+
+
+  // Full size
+
+  &.is-col-full {
+    width: 100%;
+  }
+}
+
+
+//
+// Label
+//
+
+.label {
+  display: block;
+  font-weight: $base-font-weight-semibold;
+  margin-top: 1.5rem;
+  margin-bottom: .5rem;
+}

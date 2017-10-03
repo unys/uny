@@ -1,0 +1,353 @@
+//
+// Button
+// -----------------------------------
+
+
+$button-min-width:        8em !default;
+$button-margin:           .75em 2em !default;
+$button-margin-large:     1em 3em !default;
+$button-border-radius:    4em !default;
+$button-color-text:       #fff !default;
+$button-color-background: $base-color-brand !default;
+$button-border:           1px solid $button-color-background !default;
+$button-shadow:           $base-shadow !default;
+$button-font-size:        $base-font-size !default;
+$button-font-size-small:  $base-font-size-small !default;
+$button-font-size-medium: $base-font-size-medium !default;
+$button-font-size-large:  $base-font-size-large !default;
+$button-font-size-xlarge: $base-font-size-xlarge !default;
+
+$burger-bar-width:  24px !default;
+$burger-bar-height: 1px !default;
+$burger-bar-color:  #000 !default;
+
+$button-ghost-border: 1px solid #fff !default;
+
+$button-icon-size:  3em !default;
+
+
+@mixin button-reset-styles() {
+  padding: 0;
+  line-height: 1;
+  min-width: initial;
+  min-width: auto;
+}
+
+
+.button {
+  display: inline-block;
+  min-width: $button-min-width;
+  padding: $button-margin;
+  border-radius: $button-border-radius;
+  text-align: center;
+  color: $button-color-text;
+  background-color: $button-color-background;
+  border: $button-border;
+  text-decoration: none;
+  line-height: $base-line-height;
+  font-size: $button-font-size;
+  font-weight: $base-font-weight-medium;
+  cursor: pointer;
+
+  & + .button {
+    margin-left: .625rem;
+  }
+
+  &:active {
+    @include button-active();
+  }
+
+
+  // Size: Small
+
+  &.is-small {
+    font-size: $button-font-size-small;
+  }
+
+
+  // Size: Medium
+
+  &.is-medium {
+    font-size: $base-font-size-medium;
+  }
+
+
+  // Size: Large
+
+  &.is-large {
+    font-size: $base-font-size-large;
+  }
+
+
+  // Color: White
+
+  &.is-white {
+    background-color: #fff;
+    border-color: $base-color-border;
+    color: $base-color-text;
+  }
+
+
+  // Color: Black
+
+  &.is-black {
+    background-color: #000;
+    border-color: #000;
+    color: #fff;
+  }
+
+
+  // Color: Primary
+
+  &.is-primary {
+    background-color: $base-color-primary;
+    border-color: $base-color-primary;
+    color: #fff;
+  }
+
+
+  // Color: Secondary
+
+  &.is-secondary {
+    background-color: $base-color-secondary;
+    border-color: $base-color-secondary;
+    color: #fff;
+  }
+
+
+  // Color: Success
+
+  &.is-success {
+    background-color: $base-color-success;
+    border-color: $base-color-success;
+    color: #fff;
+  }
+
+
+  // Color: Danger
+
+  &.is-danger {
+    background-color: $base-color-danger;
+    border-color: $base-color-danger;
+    color: #fff;
+  }
+
+
+  // Color: Warning
+
+  &.is-warning {
+    background-color: $base-color-warning;
+    border-color: $base-color-warning;
+    color: #fff;
+  }
+
+
+  // Color: Ghost
+
+  &.is-ghost {
+    background-color: transparent;
+    border: $button-ghost-border;
+  }
+
+
+  // Type: Icon
+
+  &.is-icon {
+    @include button-reset-styles();
+    border: 0;
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    font-size: .875rem;
+    background-color: transparent;
+    color: $base-color-text;
+    width: $button-icon-size;
+    white-space: nowrap;
+    text-align: center;
+
+    &:active {
+      box-shadow: none;
+    }
+
+    i {
+      display: block;
+      font-size: 1.5rem;
+      margin-bottom: .2rem;
+    }
+  }
+
+
+  // Type: Icon(picture)
+
+  &.is-picture {
+    @include button-reset-styles();
+    border: 0;
+    position: relative;
+    width: $button-icon-size;
+    height: $button-icon-size;
+
+    img {
+      -moz-force-broken-image-icon: 1;
+      border-radius: 50%;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: $base-color-light;
+    }
+  }
+
+
+  // Type: Burger icon
+
+  &.is-burger {
+    min-width: initial;
+    min-width: auto;
+    border: 0;
+    border-radius: 0;
+    letter-spacing: normal;
+    line-height: 1;
+    padding: .5rem;
+    margin: 0 -.5rem;
+    background-color: transparent;
+    position: relative;
+
+    &:active {
+      box-shadow: none;
+    }
+
+    &.is-active {
+      span {
+        &:nth-child(1) {
+          transform: translate3d(0,6px,0) rotate(45deg);
+        }
+
+        &:nth-child(3) {
+          transform: translate3d(0,-6px,0) rotate(-45deg);
+        }
+
+        &:nth-child(2) {
+          opacity: 0;
+        }
+      }
+    }
+
+    span {
+      display: block;
+      width: $burger-bar-width;
+      height: $burger-bar-height;
+      background-color: $burger-bar-color;
+
+      &:not(:first-child) {
+        margin-top: 5px;
+      }
+    }
+  }
+
+
+  // Type: Close icon
+
+  &.is-close {
+    min-width: initial;
+    min-width: auto;
+    border: 0;
+    border-radius: 0;
+    letter-spacing: normal;
+    line-height: 1;
+    padding: .5rem;
+    margin: 0 -.5rem;
+    background-color: transparent;
+    position: relative;
+
+    &:active {
+      box-shadow: none;
+    }
+
+    span {
+      display: block;
+      width: $burger-bar-width;
+      height: $burger-bar-height;
+      background-color: $burger-bar-color;
+
+      &:nth-child(1) {
+        transform: translate3d(0,6px,0) rotate(45deg);
+      }
+
+      &:nth-child(3) {
+        transform: translate3d(0,-6px,0) rotate(-45deg);
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      &:not(:first-child) {
+        margin-top: 5px;
+      }
+    }
+  }
+
+
+  // Type: Tag icon
+
+  &.is-tag {
+    line-height: 1;
+    min-width: initial;
+    min-width: auto;
+    padding: .375rem .5rem;
+    border-radius: $base-border-radius-small;
+  }
+
+
+  // Type: List
+
+  &.is-list {
+    @include button-reset-styles();
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+    display: block;
+    background-color: #fff;
+    color: $base-color-text;
+    padding: 1em;
+    text-align: left;
+
+    &:active {
+      box-shadow: none;
+    }
+
+    & + .button.is-list {
+      border-top: 1px solid $base-color-border;
+    }
+  }
+
+
+  // Type: Round
+
+  &.is-round {
+    @include button-reset-styles();
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 50%;
+    width: $button-icon-size;
+    height: $button-icon-size;
+  }
+
+
+  // Size: full
+
+  &.is-col-full {
+    width: 100%;
+    margin: 0;
+
+    & + .button {
+      margin-top: .5rem;
+    }
+  }
+}

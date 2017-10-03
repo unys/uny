@@ -1,0 +1,114 @@
+//
+// Snackbar
+// -----------------------------------
+
+
+$snackbar-min-width:     280px !default;
+$snackbar-max-width:     560px !default;
+$snackbar-margin:        1rem 1.5rem !default;
+$snackbar-shadow:        $base-shadow !default;
+$snackbar-border-radius: $base-border-radius-small !default;
+
+
+.snackbar {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: $snackbar-min-width;
+  max-width: $snackbar-max-width;
+  padding: $snackbar-margin;
+  border-radius: $snackbar-border-radius;
+  background-color: $base-color-brand;
+  color: #fff;
+
+  a {
+    color: #fff;
+  }
+
+
+  // Color: White
+
+  &.is-white {
+    background-color: #fff;
+    border-color: $base-color-border;
+    color: $base-color-text;
+    box-shadow: $snackbar-shadow;
+  }
+
+
+  // Color: Black
+
+  &.is-black {
+    background-color: #000;
+    color: #fff;
+  }
+
+
+  // Color: Primary
+
+  &.is-primary {
+    background-color: $base-color-primary;
+    color: #fff;
+  }
+
+
+  // Color: Secondary
+
+  &.is-secondary {
+    background-color: $base-color-secondary;
+    color: #fff;
+  }
+
+
+  // Color: Success
+
+  &.is-success {
+    background-color: $base-color-success;
+    color: $base-color-text;
+  }
+
+
+  // Color: Danger
+
+  &.is-danger {
+    background-color: $base-color-danger;
+    color: #fff;
+  }
+
+
+  // Color: Warning
+
+  &.is-warning {
+    background-color: $base-color-warning;
+    color: $base-color-text;
+  }
+
+
+  // Position
+
+  &.is-top,
+  &.is-bottom {
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 5;
+  }
+
+
+  // Position: Top
+
+  &.is-top {
+    top: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+
+  // Position: Bottom
+
+  &.is-bottom {
+    bottom: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}

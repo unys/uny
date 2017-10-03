@@ -1,0 +1,56 @@
+//
+// Code
+// -----------------------------------
+
+
+$code-padding:          .25rem;
+$pre-padding:           1.5rem;
+$pre-border:            2px solid $base-color-border;
+$code-color-background: $base-color-light;
+
+
+code {
+  background-color: $code-color-background;
+  font-size: $base-font-size-small;
+  border-radius: $base-border-radius-small;
+  color: $base-color-code;
+  padding: $code-padding;
+}
+
+pre {
+  display: table;
+  table-layout:fixed;
+  width: 100%;
+  margin-bottom: -2.5rem;
+  padding-bottom: 2.5rem;
+  position: relative;
+
+  &:not(:first-child) {
+    margin-top: 1.5rem;
+  }
+
+  &:before {
+    content: attr(data-syntax);
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-transform: uppercase;
+    color: color($base-color-text a(.5));
+    background-color: $base-color-light;
+    border-top-right-radius: $base-border-radius;
+    border-bottom-left-radius: $base-border-radius;
+    padding: .25rem .75rem;
+    font-size: $base-font-size-small;
+  }
+
+  > code {
+    display: block;
+    font-size: $base-font-size;
+    border-radius: $base-border-radius;
+    color: $base-color-text;
+    line-height: $base-line-height;
+    overflow-x: scroll;
+    padding: $pre-padding !important;
+    border: $pre-border;
+  }
+}

@@ -1,0 +1,122 @@
+//
+// Color
+// -----------------------------------
+
+
+$gradation-color-background-start: #ff6e40 !default;
+$gradation-color-background-end:   #ffa000 !default;
+
+
+//
+// brand
+//
+
+.is-brand {
+  background-color: $base-color-brand;
+  color: #fff;
+}
+
+
+//
+// White
+//
+
+.is-white {
+  background-color: #fff;
+}
+
+
+//
+// Black
+//
+
+.is-black {
+  background-color: #000;
+  color: #fff;
+
+  a {
+    color: #fff;
+  }
+}
+
+
+//
+// Gray
+//
+
+.is-gray {
+  background-color: $base-color-light;
+}
+
+
+//
+// Primary
+//
+
+.is-primary {
+  background-color: color($base-color-primary a(.3));
+}
+
+
+//
+// Secondary
+//
+
+.is-secondary {
+  background-color: color($base-color-secondary a(.3));
+}
+
+
+//
+// Success
+//
+
+.is-success {
+  background-color: color($base-color-success a(.3));
+}
+
+
+//
+// Danger
+//
+
+.is-danger {
+  background-color: color($base-color-danger a(.3));
+}
+
+
+//
+// Warning
+//
+
+.is-warning {
+  background-color: color($base-color-warning a(.3));
+}
+
+
+//
+// Move gradation
+//
+
+.is-gradation {
+  background: linear-gradient(270deg, $gradation-color-background-start, $gradation-color-background-end);
+  background-size: 200% 200%;
+  animation: isGradation 5s ease infinite;
+  color: #fff;
+
+  a {
+    color: #fff;
+  }
+}
+
+@keyframes isGradation {
+  0%{
+    background-position: 0% 50%;
+  }
+  50%{
+    background-position: 100% 50%;
+  }
+  100%{
+    background-position: 0% 50%;
+  }
+}

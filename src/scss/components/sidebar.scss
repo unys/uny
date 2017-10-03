@@ -1,0 +1,77 @@
+//
+// Sidebar
+// -----------------------------------
+
+
+$sidebar-min-width: 240px !default;
+$sidebar-max-width: 480px !default;
+$sidebar-font-size: $base-font-size-small !default;
+$sidebar-sticky-offset-top: 2.5rem !default;
+
+
+.sidebar {
+  min-width: $sidebar-min-width;
+  max-width: $sidebar-max-width;
+  padding: 3rem 1.25rem;
+
+  &:first-child {
+    border-bottom: 1px solid $base-color-border;
+  }
+
+  &:not(:first-child) {
+    border-top: 1px solid $base-color-border;
+  }
+
+  @include screen-medium() {
+    padding: 5rem 2.5rem;
+
+    &:first-child {
+      border: 0;
+      border-right: 1px solid $base-color-border;
+    }
+
+    &:not(:first-child) {
+      border: 0;
+      border-left: 1px solid $base-color-border;
+    }
+  }
+
+  @include screen-large() {
+    padding: 6.25rem 5rem;
+  }
+
+  h1,
+  .type-h1,
+  h2,
+  .type-h2,
+  h3,
+  .type-h3,
+  h4,
+  .type-h4,
+  h5,
+  .type-h5,
+  h6,
+  .type-h6 {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+
+  // Sticky mode [Edge 16+]
+
+  &.is-sticky {
+    > .inner {
+      position: sticky;
+      top: calc(3.75rem + $sidebar-sticky-offset-top);
+      z-index: 2;
+
+      @include screen-medium() {
+        top: calc(4.25rem + $sidebar-sticky-offset-top);
+      }
+
+      @include screen-large() {
+        top: calc(4.75rem + $sidebar-sticky-offset-top);
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+//
+// Video
+// -----------------------------------
+
+
+$video-border: 2px solid $base-color-border;
+
+
+video,
+.video {
+  &:not(:first-child) {
+    margin-top: 2.5rem;
+  }
+}
+
+.video-content {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+
+  iframe {
+    padding: .5rem;
+    background-color: #fff;
+    border: $picture-border;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+
+.video-caption {
+  font-size: $base-font-size-small;
+  padding: .75rem;
+  color: color($base-color-text a(.7))
+}

@@ -1,0 +1,96 @@
+//
+// Footer
+// -----------------------------------
+
+
+$footer-margin:              5rem 1.25rem;
+$footer-margin-medium:       5rem 2.5rem;
+$footer-margin-large:        5rem;
+$footer-font-size-text:      $base-font-size !default;
+$footer-font-size-copyright: $base-font-size-small !default;
+$footer-color-background:    #fff;
+
+
+.footer {
+  padding: $footer-margin;
+  box-shadow: $base-shadow;
+  background-color: $footer-color-background;
+  position: relative;
+  z-index: 1;
+
+  @include screen-medium() {
+    padding: $footer-margin-medium;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @include screen-large() {
+    padding: $footer-margin-large;
+  }
+
+  > *:not(:first-child) {
+    margin-top: 2.5rem;
+
+    @include screen-medium() {
+      margin-top: 0;
+    }
+  }
+
+  > .inner {
+    @include screen-medium() {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    > *:not(:first-child) {
+      margin-top: 2.5rem;
+
+      @include screen-medium() {
+        margin-top: 0;
+      }
+    }
+
+    > .copyright {
+      @include screen-medium() {
+        margin-top: 0;
+      }
+    }
+  }
+
+  > .copyright {
+    @include screen-medium() {
+      margin-top: 0;
+    }
+  }
+
+  p {
+    font-size: $footer-font-size-text;
+    @include screen-medium() {
+      &:not(:first-child) {
+        margin-top: 2.5rem;
+      }
+    }
+  }
+
+  .copyright {
+    display: block;
+    font-size: $footer-font-size-copyright;
+    margin-top: 2.5rem;
+  }
+
+
+  // Align: Center
+
+  &.is-center {
+    text-align: center;
+
+    > .inner {
+      justify-content: center;
+    }
+  }
+}
+
+
+.footer-menu {}

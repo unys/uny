@@ -1,0 +1,57 @@
+//
+// Field
+// -----------------------------------
+
+
+$field-button-padding: .5rem 1.25rem;
+$field-button-border:  1px solid $base-color-button-border;
+
+
+.field {
+  display: inline-flex;
+
+  .input,
+  .button {
+    position: relative;
+    border-radius: 0;
+  }
+
+  .input {
+    flex: 1 1 auto;
+    width: 100%;
+
+    & + .input {
+      margin-left: -1px;
+    }
+  }
+
+  .button {
+    min-width: initial;
+    min-width: auto;
+    border: $field-button-border;
+    padding: $field-button-padding;
+    color: $base-color-text;
+    background-color: transparent;
+
+    & + .button {
+      margin-left: -1px;
+    }
+  }
+
+  .input + .button,
+  .button + .input {
+    margin-left: -1px;
+  }
+
+  > .input:first-child,
+  > .button:first-child {
+    border-top-left-radius: $base-border-radius-small;
+    border-bottom-left-radius: $base-border-radius-small;
+  }
+
+  > .input:last-child,
+  > .button:last-child {
+    border-top-right-radius: $base-border-radius-small;
+    border-bottom-right-radius: $base-border-radius-small;
+  }
+}

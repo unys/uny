@@ -1,0 +1,57 @@
+//
+// List
+// -----------------------------------
+
+
+ul,
+ol {
+  padding-left: 1.25rem;
+  margin-bottom: -2.5rem;
+  padding-bottom: 2.5rem;
+  text-align: left;
+
+  &:not(:first-child) {
+    margin-top: 1.5rem;
+  }
+
+  ul,
+  ol {
+    margin-top: 1rem;
+
+    &:not(:first-child) {
+      margin-top: 1rem;
+    }
+  }
+
+
+  // No lits style type
+
+  &.is-no-style {
+    list-style: none;
+    padding-left: 0;
+
+    ul,
+    ol {
+      list-style: inherit;
+    }
+  }
+}
+
+ul {
+  list-style-type: disc;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+li {
+  &:not(:first-child) {
+    margin-top: 1rem;
+  }
+
+  a {
+    display: inline-block;
+    color: $base-color-link;
+  }
+}

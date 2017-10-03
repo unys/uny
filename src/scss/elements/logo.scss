@@ -1,0 +1,49 @@
+//
+// Logo
+// -----------------------------------
+
+
+.logo {
+  font-size: $base-font-size-xxlarge;
+  line-height: 1;
+  cursor: default;
+
+  a {
+    color: $base-color-text;
+    text-decoration: none;
+  }
+
+
+  // Small
+
+  &.is-small {
+    font-size: $base-font-size-large;
+  }
+
+
+  // Medium
+
+  &.is-medium {
+    font-size: $base-font-size-xlarge;
+  }
+
+
+  // Centering
+
+  &.is-center {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  // Icon
+
+  &.is-icon {
+    font-size: $base-font-size;
+
+    img {
+      width: 32px;
+    }
+  }
+}

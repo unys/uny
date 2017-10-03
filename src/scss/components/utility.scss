@@ -1,0 +1,88 @@
+//
+// Utility
+// -----------------------------------
+
+
+//
+// Hide on all screen
+//
+
+.is-hide {
+  @include hide();
+}
+
+
+//
+// Hide on [Small|Medium|Large|xlarge] screen
+//
+
+$max-breakpoint-small-screen:  767px !default;
+$min-breakpoint-medium-screen: 768px !default;
+$max-breakpoint-medium-screen: 1199px !default;
+$min-breakpoint-large-screen:  1200px !default;
+
+.hide-on-small {
+  @media (max-width: $max-breakpoint-small-screen) {
+    display: none;
+  }
+}
+
+.hide-on-medium {
+  @media (min-width: $min-breakpoint-medium-screen) and (max-width: $max-breakpoint-medium-screen) {
+    display: none;
+  }
+}
+
+.hide-on-large {
+  @media (min-width: $min-breakpoint-large-screen) {
+    display: none;
+  }
+}
+
+
+//
+// Margin
+//
+// Note: Use of the margin class is deprecated.
+//       Avoid using other than when there is no other means.
+//
+
+$margin-xsmall: 10px !default;
+$margin-small:  20px !default;
+$margin-medium: 40px !default;
+$margin-large:  60px !default;
+$margin-xlarge: 80px !default;
+
+@each $direction in (top, right, bottom, left) {
+  .margin-$(direction)-xsmall {
+    margin-$(direction): $margin-xsmall !important;
+  }
+
+  .margin-$(direction)-small {
+    margin-$(direction): $margin-small !important;
+  }
+
+  .margin-$(direction)-medium {
+    margin-$(direction): $margin-medium !important;
+  }
+
+  .margin-$(direction)-large {
+    margin-$(direction): $margin-large !important;
+  }
+
+  .margin-$(direction)-xlarge {
+    margin-$(direction): $margin-xlarge !important;
+  }
+}
+
+
+//
+// Centering
+//
+
+.is-content-center {
+  display: inline-flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+}

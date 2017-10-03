@@ -1,0 +1,125 @@
+/*! UNY CSS Framework @1x | unycss.com | Copyright 2017 kokushin | MIT license */
+
+@import "../core/variables.scss";
+@import "../core/mixins.scss";
+
+//
+// Dark theme
+// -----------------------------------
+
+
+$base-color:       #263238 !default;
+$base-color-white: #fff !default;
+
+
+//
+// Header, Footer
+//
+
+.header,
+.footer {
+  background-color: $base-color !important;
+  color: $base-color-white !important;
+
+  a {
+    &:not(.button) {
+      color: $base-color-white !important;
+    }
+    &.is-current {
+      border-left-color: $base-color-white;
+      &:before {
+        background-color: $base-color-white;
+      }
+    }
+  }
+}
+
+
+//
+// Main
+//
+
+.main {
+  background-color: color($base-color a(.95));
+  color: white !important;
+
+  a {
+    color: white !important;
+  }
+}
+
+
+//
+// Section
+//
+
+.section {
+  &:nth-of-type(even) {
+    background-color: color($base-color a(.95)) !important;
+  }
+}
+
+
+//
+// Card
+//
+
+.card {
+  border-color: color($base-color-white a(.1)) !important;
+  background-color: $base-color !important;
+  color: $base-color-white !important;
+}
+
+
+//
+// Tree
+//
+
+.tree {
+  ul,
+  ol {
+    ul,
+    ol {
+      border-left-color: color($base-color-white a(.1));
+    }
+  }
+
+  li {
+    &.is-current {
+      > a {
+        color: $base-color-white !important;
+        background-color: $base-color !important;
+      }
+    }
+  }
+}
+
+
+//
+// Code
+//
+
+pre {
+  code {
+    border-color: color($base-color-white a(.1));
+  }
+}
+
+
+//
+// Hr
+//
+
+hr {
+  background-color: color($base-color-white a(.2));
+}
+
+
+//
+// Button
+//
+
+.button {
+  background-color: $base-color !important;
+  border-color: color($base-color-white a(.1)) !important;
+}

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UNY - A modern CSS framework</title>
+  <meta name="description" content="UNYはモダンな雰囲気のCSSフレームワークです。カードやボタンなど基本的なコンポーネントに加え、テーマファイルによる拡張も可能です。">
+  <meta name="author" content="kokushin">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/uny.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github-gist.min.css" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+  <style>
+    .fa {
+      margin-right: .25em;
+    }
+    .button.is-icon .fa,
+    .button.is-round .fa {
+      margin-right: 0;
+    }
+    .header .menu {
+      margin-left: auto;
+      margin-right: 2.5rem;
+    }
+    .uny-logo:before {
+      content: "Uny";
+      font-size: 6rem;
+      line-height: 1;
+      color: #fff;
+      font-weight: 300;
+    }
+    @media screen and (min-width: 768px) {
+      .uny-logo:before {
+        font-size: 12.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="offcanvas">
+    <div class="offcanvas-menu">
+
+      <button class="button is-close offcanvas-close">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="inner">
+        <a href="/" class="is-current">概要</a>
+        <div class="pulldown">
+          <a href="javascript:void(0);">ドキュメント <i class="fa fa-angle-down"></i></a>
+          <div class="pulldown-content">
+            <a href="./index_en.html" class="button is-list">English</a>
+            <a href="./" class="button is-list">日本語</a>
+          </div>
+        </div>
+        <a href="/themes">テーマ</a>
+        <hr>
+        <a href="#" class="button is-white is-small"><i class="fa fa-github"></i> GitHub</a>
+        <a href="#" class="button is-small"><i class="fa fa-download"></i> ダウンロード</a>
+      </div>
+    </div>
+    <div class="offcanvas-content">
+
+      <header class="header is-sticky">
+        <h1 class="logo is-medium">UNY</h1>
+        <nav class="header-menu">
+          <a href="/" class="is-current">概要</a>
+          <div class="pulldown">
+            <a href="javascript:void(0);">ドキュメント <i class="fa fa-angle-down"></i></a>
+            <div class="pulldown-content">
+              <a href="./index_en.html" class="button is-list">English</a>
+              <a href="./" class="button is-list">日本語</a>
+            </div>
+          </div>
+          <a href="/themes">テーマ</a>
+          <a href="#" class="button is-white is-small"><i class="fa fa-github"></i> GitHub</a>
+          <a href="#" class="button is-small"><i class="fa fa-download"></i> ダウンロード</a>
+        </nav>
+        <button class="button is-burger hide-on-medium hide-on-large hide-on-xlarge offcanvas-open">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </header>
+
+      <div class="hero is-center is-gradation">
+        <div class="uny-logo"></div>
+        <div class="type-h1">それは、イマドキなCSSフレームワーク。</div>
+        <p>UNYはシンプルなCSSフレームワークです。<br>カードやボタンなど基本的なコンポーネントに加え、テーマファイルによる拡張も可能です。</p>
+        <p>
+          <a href="#" class="button is-white"><i class="fa fa-book"></i> ドキュメントを読む</a>
+        </p>
+      </div>
+
+      <main class="main">
+        <div class="content">
+          <section class="section">
+            <div class="inner is-small">
+              <h2><i class="fa fa-check"></i> 特徴</h2>
+              <h3>多彩なコンポーネント</h3>
+              <p>UNYで表現可能なコンポーネントの一部をお見せします。<br> ボタンやフォーム部品など単体で利用できるものから、リストやカードなどセットで利用できるものなど様々です。</p>
+              <h4>ボタン</h4>
+              <div class="grid is-center is-middle">
+                <div>
+                  <a href="#" class="button">Button</a>
+                </div>
+                <div>
+                  <a href="#" class="button is-white">Button</a>
+                </div>
+                <div>
+                  <a href="#" class="button is-small"><i class="fa fa-home"></i> Home</a>
+                </div>
+                <div>
+                  <a href="#" class="button is-white is-large">Button</a>
+                </div>
+                <div>
+                  <a href="#" class="button is-icon"><i class="fa fa-home"></i> Home</a>
+                </div>
+                <div>
+                  <a href="#" class="button is-round"><i class="fa fa-plus"></i></a>
+                </div>
+              </div>
+              <h4>フォーム部品</h4>
+              <div class="grid is-center is-middle">
+                <div>
+                  <input class="input" type="text" placeholder="text">
+                </div>
+                <div>
+                  <div class="field">
+                    <input class="input" type="text" placeholder="Search">
+                    <button class="button"><i class="fa fa-search"></i></button>
+                  </div>
+                </div>
+                <div>
+                  <label class="input is-checkbox" for="checkbox-1">
+                    <input type="checkbox" name="" id="checkbox-1">
+                    <span>Checkbox</span>
+                  </label>
+                </div>
+                <div>
+                  <label class="input is-radio" for="radio-1">
+                    <input type="radio" name="radio" id="radio-1">
+                    <span>Radio</span>
+                  </label>
+                </div>
+              </div>
+              <h4>ツリー型リスト、カード</h4>
+              <div class="grid is-col-medium-2 is-center is-middle">
+                <div>
+                  <div class="tree">
+                    <ul>
+                      <li><a href="#">Introduction</a></li>
+                      <li><a href="#">Download</a></li>
+                      <li><a href="#">Usgae</a></li>
+                      <li class="is-parent is-current"><a href="#">Components</a>
+                        <ul>
+                          <li><a href="#">Header</a></li>
+                          <li><a href="#">Footer</a></li>
+                          <li><a href="#">Layout</a></li>
+                          <li><a href="#">Menu</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div>
+                  <div class="card">
+                    <div class="card-image" style="background-image: url(https://source.unsplash.com/random);"></div>
+                    <h3>Heading</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae, debitis.</p>
+                    <p><a href="#" class="button">Download</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="section">
+            <div class="inner is-small">
+              <h2><i class="fa fa-bolt"></i> クイックスタート</h2>
+              <h3>CDNの利用</h3>
+              <p>ダウンロードしてCSS、JSファイルを読み込ませる方法以外にも、<br>CDNを利用することで簡単に始めることができます。</p>
+              <p>UNYを利用したいWebページの <code>&lt;head&gt;</code> タグ内に下記の記述を追記します。</p>
+              <pre><code class="html">&lt;link rel="stylesheet" href="https://unpkg.com/uny@latest/dist/uny.min.css"&gt;
+    &lt;script src="https://unpkg.com/uny@latest/dist/uny.min.js"&gt;&lt;/script&gt;</code></pre>
+              <p>利用したいコンポーネントのHTMLタグを記述します。</p>
+              <pre><code class="html">&lt;div class="card"&gt;
+      &lt;div class="card-image" style="background-image: url(https://source.unsplash.com/random);"&gt;&lt;/div&gt;
+      &lt;h3&gt;Heading&lt;/h3&gt;
+      &lt;p&gt;Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae, debitis.&lt;/p&gt;
+      &lt;p&gt;&lt;a href="#" class="button"&gt;Download&lt;/a&gt;&lt;/p&gt;
+    &lt;/div&gt;</code></pre>
+              <p>これだけで、画像が埋め込まれたカード型のコンポーネントが表示されます 🎉</p>
+            </div>
+          </section>
+
+          <section class="section">
+            <div class="inner is-small">
+              <h2><i class="fa fa-book"></i> ドキュメント</h2>
+              <p>使い方、その他の機能紹介、コンポーネント紹介などはドキュメントに詳しく記載されています。<br>ドキュメントは英語、日本語の2種類が用意されています。</p>
+              <p><a href="#" class="button"><i class="fa fa-book"></i> ドキュメントページへ移動 (ja)</a></p>
+            </div>
+          </section>
+
+          <section class="section">
+            <div class="inner is-small">
+              <h2><i class="fa fa-github"></i> View on GitHub</h2>
+              <p>UNYは <a href="https://twitter.com/kokushing">@kokushing</a> によって開発され、GitHub上にオープンソース（MITライセンス）で公開されています。<br>ご意見・ご要望、バグ報告やプルリクエストをぜひお寄せください！</p>
+              <p>Starを頂けるとやる気に繋がります ;)</p>
+              <p><a href="#" class="button"><i class="fa fa-github"></i> GitHubページへ移動する</a></p>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="inner">
+          <div class="logo is-medium">UNY</div>
+          <div class="margin-left-small margin-right-small">
+            <p>A modern CSS framework. <br>UNY is provided with <a href="#">MIT license.</a> Made by @kokushin &hearts; OSS</p>
+            <p>Icon fonts by Font Awesome, Photo by Unsplash</p>
+          </div>
+          <small class="copyright">&copy; 2017 UNY</small>
+        </div>
+      </footer>
+
+      <div class="offcanvas-overlay offcanvas-close"></div>
+    </div>
+  </div>
+
+  <script src="/js/uny.js"></script>
+</body>
+</html>

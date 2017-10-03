@@ -1,0 +1,130 @@
+//
+// Hero
+// -----------------------------------
+
+
+$hero-color-background: $base-color-brand !default;
+
+
+.hero {
+  position: relative;
+  background-color: $hero-color-background;
+  padding: 3.75rem 1.25rem;
+
+  @include screen-medium() {
+    padding: 5rem 2.5rem;
+  }
+
+  @include screen-large() {
+    padding: 6.25rem 5rem;
+  }
+
+  &:not(.button) {
+    color: #fff;
+  }
+
+  & > *:not(.hero-image) {
+    position: relative;
+    z-index: 1;
+  }
+
+  p {
+    margin-top: 1.5rem;
+    margin-bottom: -2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  h1,
+  .type-h1,
+  h2,
+  .type-h2,
+  h3,
+  .type-h3,
+  h4,
+  .type-h4,
+  h5,
+  .type-h5,
+  h6,
+  .type-h6 {
+    margin-bottom: -2.5rem;
+    padding-bottom: 2.5rem;
+
+    &:not(:first-child) {
+      margin-top: 3rem;
+
+      @include screen-medium() {
+        margin-top: 3.75rem;
+      }
+    }
+  }
+
+  .button {
+    & + .button {
+      margin: 1.25rem 0 0;
+
+      @include screen-medium() {
+        margin-left: .625rem;
+      }
+    }
+  }
+
+
+  // Set the margin for Sticky mode.
+
+  .is-sticky + & {
+    padding-top: calc($header-min-height + 3.75rem);
+
+    @include screen-medium() {
+      padding-top: calc($header-min-height-medium + 5rem);
+    }
+
+    @include screen-large() {
+      padding-top: calc($header-min-height-large + 6.25rem);
+    }
+  }
+
+
+  // Full height
+
+  &.is-row-full {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+
+  // Align: Center
+
+  &.is-center {
+    text-align: center;
+  }
+}
+
+
+//
+// Set hero image
+//
+
+.hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: #fff;
+
+  &:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.5);
+  }
+}

@@ -1,0 +1,27 @@
+//
+// Picture
+// -----------------------------------
+
+
+$picture-border: 2px solid $base-color-border;
+
+
+figure,
+.picture {
+  &:not(:first-child) {
+    margin-top: 2.5rem;
+  }
+
+  img {
+    padding: .5rem;
+    background-color: #fff;
+    border: $picture-border;
+  }
+
+  figcaption,
+  .picture-caption {
+    font-size: $base-font-size-small;
+    padding: .75rem;
+    color: color($base-color-text a(.7))
+  }
+}

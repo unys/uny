@@ -1,0 +1,16 @@
+//
+// Blockquote
+// -----------------------------------
+
+
+$blockquote-border:     2px solid $base-color-border;
+
+
+blockquote {
+  padding: 1rem 0 1rem 1.25rem;
+  border-left: $blockquote-border;
+
+  &:not(:first-child) {
+    margin-top: 1.5rem;
+  }
+}

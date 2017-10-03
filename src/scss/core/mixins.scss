@@ -1,0 +1,62 @@
+//
+// Mixins
+// -----------------------------------
+
+
+//
+// Media queries
+//
+
+@mixin screen-medium() {
+  @media (min-width: $base-breakpoint-medium) {
+    @content;
+  }
+}
+
+@mixin screen-large() {
+  @media (min-width: $base-breakpoint-large) {
+    @content;
+  }
+}
+
+@mixin screen-xlarge() {
+  @media (min-width: $base-breakpoint-xlarge) {
+    @content;
+  }
+}
+
+
+//
+// Visually hidden
+//
+
+@mixin hide() {
+  position: absolute;
+  overflow: hidden;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+
+//
+// Button active
+//
+
+@mixin button-active() {
+  box-shadow: $base-shadow-active;
+}
+
+
+//
+// Button focus
+//
+
+@mixin button-focus() {
+  border-color: $base-color-link;
+  box-shadow: $input-shadow-focus;
+  z-index: 1;
+}

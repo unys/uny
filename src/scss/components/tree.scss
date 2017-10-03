@@ -1,0 +1,49 @@
+//
+// Tree
+// -----------------------------------
+
+
+$tree-min-width:                     200px !default;
+$tree-item-color-text-current:       #fff !default;
+$tree-item-color-background-current: $base-color-brand !default;
+
+
+.tree {
+  min-width: $tree-min-width;
+  margin-top: 1rem;
+
+  ul,
+  ol {
+    list-style: none;
+    text-align: left;
+    padding-left: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+
+    ul,
+    ol {
+      border-left: 2px solid $base-color-border;
+      margin: .75rem 0 .75rem .75rem;
+      padding-left: .5rem;
+    }
+
+    > li {
+      margin: 0;
+
+      a {
+        display: block;
+        padding: .5rem .75rem;
+        text-decoration: none;
+        color: $base-color-text;
+      }
+
+      &.is-current {
+        > a {
+          color: $tree-item-color-text-current;
+          background-color: $tree-item-color-background-current;
+          border-radius: $base-border-radius-small;
+        }
+      }
+    }
+  }
+}

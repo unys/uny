@@ -1,0 +1,107 @@
+//
+// Card
+// -----------------------------------
+
+
+$card-max-width:     35em !default;
+$card-background:    white !default;
+$card-padding:       2.5rem 2rem !default;
+$card-border:        2px solid $base-color-border !default;
+$card-border-radius: $base-border-radius !default;
+$card-shadow:        $base-shadow !default;
+$card-image-height:  200px !default;
+
+
+.card {
+  max-width: $card-max-width;
+  padding: $card-padding;
+  border-radius: $card-border-radius;
+  background-color: $card-background;
+  border: $card-border;
+  text-align: left;
+  overflow: hidden;
+
+
+  // Type: Clickable
+
+  &.is-clickable {
+    padding: 0;
+
+    > * {
+      display: block;
+      text-decoration: none;
+      color: $base-color-text;
+      padding: $card-padding;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+    }
+  }
+
+
+  // Type: Skeleton
+
+  &.is-skeleton {
+    border: 2px dashed $base-color-border;
+    color: color($base-color-text a(.3));
+
+    > * {
+      color: color($base-color-text a(.3));
+    }
+
+    &:hover {
+      border-color: #ddd;
+    }
+  }
+
+
+  // Fit height
+
+  &.is-row-fit {
+    height: 100%;
+  }
+
+
+  // Align: Center
+
+  &.is-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    &.is-clickable {
+      > * {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+    }
+  }
+
+
+  // Size: Full
+
+  &.is-col-full {
+    max-width: 100%;
+  }
+}
+
+
+//
+// Card image
+//
+
+.card-image {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: $base-color-light;
+  height: $card-image-height;
+  margin: -2.5rem -2rem 0;
+
+  & + * {
+    margin-top: 2.5rem !important;
+  }
+}

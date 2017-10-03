@@ -1,0 +1,84 @@
+//
+// Navbar
+// -----------------------------------
+
+
+$navbar-max-width: 40%;
+$navbar-shadow: $base-shadow;
+$navbar-black-color-background: #000;
+$navbar-black-color-current: color(#fff a(.2));
+
+
+.navbar {
+  display: block;
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: scroll;
+  margin-top: 0;
+  box-shadow: $navbar-shadow;
+
+  > * {
+    display: flex;
+    align-items: center;
+    padding: .5rem 0;
+
+    @include screen-medium() {
+      padding: .5rem 2.5rem;
+    }
+
+    @include screen-large() {
+      padding: .5rem 5rem;
+    }
+
+    &:before,
+    &:after {
+      content: " ";
+      display: block;
+      padding: 0 .25rem;
+      height: 1em;
+
+      @include screen-medium() {
+        display: none;
+      }
+    }
+  }
+
+  a {
+    display: block;
+    text-decoration: none;
+    white-space: nowrap;
+    margin: 0;
+
+    &:not(.button) {
+      color: $base-color-text;
+      padding: .75em 1.25rem;
+    }
+
+    @include screen-medium() {
+      width: auto;
+    }
+
+    &.is-current {
+      background-color: $base-color-brand;
+      border-radius: $base-border-radius-small;
+      color: #fff;
+    }
+  }
+
+
+  // Color: Bar(black)
+
+  &.is-bar.is-black {
+    background-color: #000;
+
+    a {
+      &:not(.button) {
+        color: #fff;
+      }
+
+      &.is-current {
+        background-color: $navbar-black-color-current;
+      }
+    }
+  }
+}

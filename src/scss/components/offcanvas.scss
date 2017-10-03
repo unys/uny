@@ -1,0 +1,93 @@
+//
+// Offcanvas menu
+// -----------------------------------
+
+
+$offcanvas-margin:           calc($header-min-height + 2.5rem) 1.25rem 2.5rem !default;
+$offcanvas-width:            280px !default;
+$offcanvas-width-medium:     320px !default;
+$offcanvas-width-large:      480px !default;
+$offcanvas-color-background: #fff !default;
+
+
+.offcanvas {
+  position: relative;
+  z-index: 5;
+
+  &.is-active {
+    overflow: hidden;
+  }
+}
+
+.offcanvas-content {
+  background-color: $offcanvas-color-background;
+  box-shadow: $base-shadow;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: $offcanvas-width;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: scroll;
+  transform: translate3d($offcanvas-width, 0, 0);
+  transition: .35s all cubic-bezier(0.165, 0.840, 0.440, 1.000);
+
+  .is-active & {
+    transform: translate3d(0, 0, 0);
+  }
+
+  > .inner {
+    padding: $offcanvas-margin;
+  }
+
+  > .button.is-close {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    z-index: 1;
+  }
+}
+
+
+.offcanvas-overlay {
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: color(#000 a(.5));
+  width: 100%;
+  height: 100%;
+  transition: .35s all cubic-bezier(0.165, 0.840, 0.440, 1.000);
+
+  .is-active & {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+
+.offcanvas-menu {
+  a {
+    &:not(.button) {
+      display: block;
+      width: 100%;
+      text-decoration: none;
+      color: $base-color-text;
+      padding: 1rem;
+
+      &.is-current {
+        color: $base-color-brand;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .button {
+    & + .button {
+      margin-left: 0;
+      margin-top: 1rem;
+    }
+  }
+}

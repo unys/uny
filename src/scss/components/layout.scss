@@ -1,0 +1,155 @@
+//
+// Layout
+// -----------------------------------
+
+
+//
+// Main
+//
+
+.main {
+  position: relative;
+
+  @include screen-medium() {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+
+//
+// Content
+//
+
+.content {
+  flex: 1;
+}
+
+
+//
+// Section
+//
+
+.section {
+  padding: 3rem 1.25rem;
+
+  @include screen-medium() {
+    padding: 5rem 2.5rem;
+  }
+
+  @include screen-large() {
+    padding: 6.25rem 5rem;
+  }
+
+  & + .section {
+    border-top: 1px solid $base-color-border;
+  }
+
+
+  // Centering
+
+  &.is-center {
+    text-align: center;
+  }
+
+
+  // Gray
+
+  &.is-gray {
+    border-top: 0;
+  }
+}
+
+
+//
+// Inner
+//
+
+.inner {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+
+  @include screen-large() {
+    max-width: $base-layout-inner-width;
+  }
+
+  &.is-small {
+    max-width: $base-layout-inner-width-small;
+
+    @include screen-xlarge() {
+      max-width: calc($base-layout-inner-width-small + 200px);
+    }
+  }
+}
+
+
+//
+// Box
+//
+
+.box {
+  &:not(:first-child) {
+    margin-top: 1.5rem;
+  }
+
+
+  // Border style
+
+  &.is-border {
+    padding: 1.25rem;
+    border: 1px solid $base-color-border;
+
+
+    // Success
+
+    &.is-success,
+    &.is-danger,
+    &.is-warning {
+      border: 0;
+    }
+  }
+}
+
+
+//
+// Unit
+//
+
+.unit {
+  display: flex;
+  align-items: center;
+
+  & > *:not(:first-child) {
+    padding-left: 1.5rem;
+  }
+
+  &:not(:first-child) {
+    margin-top: 1.25rem;
+
+    @include screen-medium() {
+      margin-top: 2rem;
+    }
+  }
+
+
+  // Top
+
+  &.is-row-top {
+    align-items: flex-start;
+  }
+
+
+  // Middle
+
+  &.is-row-middle {
+    align-items: center;
+  }
+
+
+  // Bottom
+
+  &.is-row-bottom {
+    align-items: flex-end;
+  }
+}

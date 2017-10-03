@@ -1,0 +1,76 @@
+//
+// Tab
+// -----------------------------------
+
+
+$tab-border:                   1px solid $base-color-button-border;
+$tab-border-radius:            $base-border-radius-small;
+$tab-color-background-current: #fff;
+$tab-color-text-current:       $base-color-brand;
+
+
+//
+// Tab body
+//
+
+.tab {
+  position: relative;
+}
+
+
+//
+// Tab list
+//
+
+.tab-list {
+  display: flex;
+  align-items: center;
+  border-bottom: $tab-border;
+
+  a {
+    padding: .5rem 1.25rem;
+    color: $base-color-text;
+    text-decoration: none;
+
+    &.is-current {
+      color: $tab-color-text-current;
+      border-top-left-radius: $tab-border-radius;
+      border-top-right-radius: $tab-border-radius;
+      border-top: $tab-border;
+      border-left: $tab-border;
+      border-right: $tab-border;
+      background-color: $tab-color-background-current;
+      padding-bottom: calc(.5rem + 1px);
+      margin-bottom: -1px;
+    }
+  }
+}
+
+
+//
+// Tab content
+//
+
+.tab-content {
+  border-left: $tab-border;
+  border-right: $tab-border;
+  border-bottom: $tab-border;
+  padding: 2.5rem 2rem;
+  overflow: hidden;
+
+  > * {
+    display: none;
+
+    &.is-active {
+      display: block;
+    }
+
+    p {
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+

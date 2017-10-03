@@ -1,0 +1,151 @@
+//
+// Typography
+// -----------------------------------
+
+
+$type-font-size-h1:      $base-font-size-xxlarge !default;
+$type-font-size-h2:      $base-font-size-xlarge !default;
+$type-font-size-h3:      $base-font-size-large !default;
+$type-font-size-h4:      $base-font-size-medium !default;
+$type-font-size-h5:      $base-font-size-medium !default;
+$type-font-size-h6:      $base-font-size-medium !default;
+$type-line-height-h1:    1.2 !default;
+$type-line-height-h2:    1.3 !default;
+$type-line-height-h3:    1.4 !default;
+$type-line-height-h4:    1.4 !default;
+$type-line-height-h5:    1.4 !default;
+$type-line-height-h6:    1.4 !default;
+
+
+h1,
+.type-h1 {
+  font-size: $type-font-size-h1;
+  line-height: $type-line-height-h1;
+  font-weight: $base-font-weight-medium;
+}
+
+h2,
+.type-h2 {
+  font-size: $type-font-size-h2;
+  line-height: $type-line-height-h2;
+  font-weight: $base-font-weight-medium;
+}
+
+h3,
+.type-h3 {
+  font-size: $type-font-size-h3;
+  line-height: $type-line-height-h3;
+  font-weight: $base-font-weight-medium;
+}
+
+h4,
+.type-h4 {
+  font-size: $type-font-size-h4;
+  line-height: $type-line-height-h4;
+  font-weight: $base-font-weight-medium;
+}
+
+h5,
+.type-h5 {
+  font-size: $type-font-size-h5;
+  line-height: $type-line-height-h5;
+  font-weight: $base-font-weight-medium;
+}
+
+h6,
+.type-h6 {
+  font-size: $type-font-size-h6;
+  line-height: $type-line-height-h6;
+  font-weight: $base-font-weight-medium;
+}
+
+.type-xxlarge {
+  font-size: $base-font-size-xxhuge;
+  line-height: $type-line-height-h1;
+}
+
+.type-xlarge {
+  font-size: $base-font-size-xhuge;
+  line-height: $type-line-height-h1;
+}
+
+.type-large {
+  font-size: $base-font-size-huge;
+  line-height: $type-line-height-h1;
+}
+
+.type-medium {
+  font-size: $base-font-size;
+}
+
+.type-small {
+  font-size: $base-font-size-small;
+}
+
+.type-xsmall {
+  font-size: $base-font-size-xsmall;
+}
+
+.type-xxsmall {
+  font-size: $base-font-size-xxsmall;
+}
+
+
+//
+// Margin
+//
+
+p {
+  margin-bottom: -2.5rem;
+  padding-bottom: 2.5rem;
+
+  &:not(:first-child) {
+    margin-top: 1.5rem;
+  }
+
+  &:lang(ja) {
+    line-height: $base-line-height-jp;
+  }
+}
+
+h1,
+.type-h1,
+h2,
+.type-h2,
+h3,
+.type-h3,
+h4,
+.type-h4,
+h5,
+.type-h5,
+h6,
+.type-h6 {
+  margin-bottom: -2.5rem;
+  padding-bottom: 2.5rem;
+
+  &:not(:first-child) {
+    margin-top: 3rem;
+
+    @include screen-medium() {
+      margin-top: 3.75rem;
+    }
+  }
+
+  &:before {
+    content: " ";
+    display: block;
+    height: 3.75rem;
+    margin-top: -3.75rem;
+    visibility: hidden;
+
+    @include screen-medium() {
+      height: 4.25rem;
+      margin-top: -4.25rem;
+    }
+
+    @include screen-medium() {
+      height: 4.75rem;
+      margin-top: -4.75rem;
+    }
+  }
+}

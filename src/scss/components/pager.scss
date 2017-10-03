@@ -1,0 +1,71 @@
+//
+// Pager
+// -----------------------------------
+
+
+$pager-border-top:                    1px solid $base-color-border !default;
+$pager-item-width:                    2.375rem !default;
+$pager-item-height:                   2.375rem !default;
+$pager-item-margin:                   .5rem !default;
+$pager-item-color-text-current:       #fff !default;
+$pager-item-color-background-current: $base-color-brand !default;
+
+
+.pager {
+  display: flex;
+  align-items: center;
+  border-top: $pager-border-top;
+  padding: calc(2.5rem - $pager-item-margin) calc(1.25rem - $pager-item-margin) calc(3.75rem - $pager-item-margin);
+
+  @include screen-medium() {
+    padding: calc(3.75rem - $pager-item-margin) calc(2.5rem - $pager-item-margin) calc(5rem - $pager-item-margin);
+  }
+
+  @include screen-large() {
+    padding: calc(5rem - $pager-item-margin) calc(5rem - $pager-item-margin) calc(6.25rem - $pager-item-margin);
+  }
+
+  > li {
+    margin: $pager-item-margin;
+    list-style: none;
+
+    > a,
+    > span:not(.ellipsis) {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid $base-color-button-border;
+      width: $pager-item-width;
+      height: $pager-item-height;
+      border-radius: $base-border-radius-small;
+    }
+
+    > a {
+      text-decoration: none;
+
+      &:active {
+        @include button-active();
+      }
+    }
+
+    > span {
+      &.is-current {
+        border-color: $pager-item-color-background-current;
+        background-color: $pager-item-color-background-current;
+        color: $pager-item-color-text-current;
+        cursor: default;
+      }
+
+      &.ellipsis {
+        margin: $pager-item-margin calc($pager-item-margin + .25rem);
+      }
+    }
+  }
+
+
+  // Center
+
+  &.is-center {
+    justify-content: center;
+  }
+}
