@@ -6,7 +6,7 @@ import replace from 'rollup-plugin-replace';
 import uglify from 'rollup-plugin-uglify';
 
 export default {
-  banner: '/*! UNY CSS Framework | unycss.com | Copyright 2017 kokushin | MIT license */',
+  banner: '/*! UNY CSS Framework | https://github.com/unys/uny | Copyright 2017 kokushin | MIT license */',
   plugins: [
     resolve({
       jsnext: true,

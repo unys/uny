@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
-  "repository": "https://github.com/kokushin/uny.git",
+  "repository": "https://github.com/unys/uny.git",
   "author": "kokushin <mail@kokush.in>",
   "license": "MIT",
   "scripts": {
