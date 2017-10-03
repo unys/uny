@@ -169,5 +169,12 @@ $header-color-background:  #fff;
         }
       }
     }
+
+    .pulldown {
+      > a {
+        color: $base-color-text;
+        text-decoration: none;
+      }
+    }
   }
 }
