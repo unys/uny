@@ -3,7 +3,8 @@
 // -----------------------------------
 
 
-table {
+table,
+.table {
   width: 100%;
 
   &:not(:first-child) {
@@ -20,6 +21,17 @@ table {
     font-size: $base-font-size-large;
     margin-bottom: 1.25rem;
     text-align: left;
+  }
+}
+
+.table {
+  overflow-x: scroll;
+
+  > table {
+    th,
+    td {
+      white-space: nowrap;
+    }
   }
 }
 

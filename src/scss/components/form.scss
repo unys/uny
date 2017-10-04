@@ -1,0 +1,74 @@
+//
+// Form
+// -----------------------------------
+
+
+form {
+  > *:not(:first-child) {
+    margin-top: 1.5rem;
+  }
+
+  > * {
+    .label {
+      margin-top: 0;
+    }
+  }
+}
+
+.form {
+  max-width: $base-layout-inner-width-small;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include screen-xlarge() {
+    max-width: calc($base-layout-inner-width-small + 200px);
+  }
+
+  &:not(:first-child) {
+    margin-top: 2.5rem;
+
+    @include screen-medium() {
+      margin-top: 3.75rem;
+    }
+  }
+
+  & + *:not(:first-child) {
+    margin-top: 2.5rem;
+
+    @include screen-medium() {
+      margin-top: 3.75rem;
+    }
+  }
+
+  form {
+    > *:not(:first-child) {
+      margin-top: 1.5rem;
+    }
+
+    > * {
+      .label {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .field,
+  .unit {
+    width: 100%;
+  }
+
+  .unit {
+    > * {
+      width: 100%;
+    }
+  }
+
+
+  // Full
+
+  &.is-col-full {
+    max-width: initial;
+    max-width: auto;
+    width: 100%;
+  }
+}

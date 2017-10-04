@@ -65,8 +65,8 @@ $input-textarea-min-height: 6.25rem !default;
       &:before {
         content: " ";
         display: block;
-        width: 1.125rem;
-        height: 1.125rem;
+        min-width: 1.125rem;
+        min-height: 1.125rem;
         border: 1px solid $base-color-button-border;
         border-radius: $input-border-radius;
         margin-right: .5rem;
@@ -125,8 +125,8 @@ $input-textarea-min-height: 6.25rem !default;
       &:before {
         content: " ";
         display: block;
-        width: 1.125rem;
-        height: 1.125rem;
+        min-width: 1.125rem;
+        min-height: 1.125rem;
         border: 1px solid $base-color-button-border;
         border-radius: 50%;
         margin-right: .5rem;
@@ -235,4 +235,5 @@ $input-textarea-min-height: 6.25rem !default;
   font-weight: $base-font-weight-semibold;
   margin-top: 1.5rem;
   margin-bottom: .5rem;
+  text-align: left;
 }
