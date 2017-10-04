@@ -41,17 +41,12 @@ $sidebar-sticky-offset-top: 2.5rem !default;
   }
 
   h1,
-  .type-h1,
   h2,
-  .type-h2,
   h3,
-  .type-h3,
   h4,
-  .type-h4,
   h5,
-  .type-h5,
   h6,
-  .type-h6 {
+  [class*=type-h] {
     padding-bottom: 0;
     margin-bottom: 0;
   }

@@ -34,30 +34,6 @@ $hero-color-background: $base-color-brand !default;
     padding-bottom: 2.5rem;
   }
 
-  h1,
-  .type-h1,
-  h2,
-  .type-h2,
-  h3,
-  .type-h3,
-  h4,
-  .type-h4,
-  h5,
-  .type-h5,
-  h6,
-  .type-h6 {
-    margin-bottom: -2.5rem;
-    padding-bottom: 2.5rem;
-
-    &:not(:first-child) {
-      margin-top: 3rem;
-
-      @include screen-medium() {
-        margin-top: 3.75rem;
-      }
-    }
-  }
-
   .button {
     & + .button {
       margin: 1.25rem 0 0;
