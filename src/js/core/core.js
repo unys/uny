@@ -18,6 +18,7 @@ class Uny {
       tab:            $$('.tab'),
       tabList:        $$('.tab-list'),
       tabContent:     $$('.tab-content'),
+      inputTypeFile:  $$('.input.is-file'),
     };
   }
 }

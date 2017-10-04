@@ -18,9 +18,7 @@ class Tab extends Uny {
   events() {
     [...this.element.tabList].forEach((element, index) => {
       for (let i = 0; i < element.children.length; i++) {
-        element.children[i].addEventListener('click', (event) => {
-          this.changeCurrentTab(event, index, i);
-        });
+        element.children[i].addEventListener('click', (event) => this.changeCurrentTab(event, index, i));
       }
     });
   }

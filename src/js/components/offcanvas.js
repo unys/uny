@@ -7,6 +7,7 @@ import Uny from '../core/core';
 class Offcanvas extends Uny {
   constructor() {
     super();
+
     this.events();
   }
 
