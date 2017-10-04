@@ -53,8 +53,14 @@ This alone displays the card type component with the image embedded 🎉
 
 Sorry, coming soon...
 
+## Changelog
+
+View on [CHANGELOG.md](https://github.com/unys/uny/blob/master/CHANGELOG.md)
+
 ## Contributor
+
 [@kokushin](https://github.com/kokushin)
 
 ## License
+
 Code and documentation copyright 2017 by kokushin. Code released under the [MIT License](https://github.com/kokushin/units/blob/master/LICENSE).
