@@ -15,8 +15,10 @@ class Input extends Uny {
   // Click events
   //
   events() {
-    [...this.element.inputTypeFile].forEach(element => {
-      element.addEventListener('change', () => this.showFileInfo(element));
+    [...this.elements.inputIsFile].forEach(element => {
+      element.addEventListener('change', () => {
+        this.showFileInfo(element);
+      });
     });
   }
 

@@ -2,23 +2,21 @@
 // core.js
 // -----------------------------------
 
-import $$ from '../lib/querySelector';
-
 class Uny {
   constructor() {
 
     //
-    // Set nodeLists
+    // Get trigger elements
     //
-    this.element = {
+    this.elements = {
       body:           document.body,
-      offcanvas:      $$('.offcanvas'),
-      offcanvasOpen:  $$('.offcanvas-open'),
-      offcanvasClose: $$('.offcanvas-close'),
-      tab:            $$('.tab'),
-      tabList:        $$('.tab-list'),
-      tabContent:     $$('.tab-content'),
-      inputTypeFile:  $$('.input.is-file'),
+      offcanvas:      document.getElementsByClassName('offcanvas'),
+      offcanvasOpen:  document.getElementsByClassName('offcanvas-open'),
+      offcanvasClose: document.getElementsByClassName('offcanvas-close'),
+      tab:            document.getElementsByClassName('tab'),
+      tabList:        document.getElementsByClassName('tab-list'),
+      tabContent:     document.getElementsByClassName('tab-content'),
+      inputIsFile:    document.getElementsByClassName('input is-file'),
     };
   }
 }

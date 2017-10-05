@@ -15,11 +15,11 @@ class Offcanvas extends Uny {
   // Click events
   //
   events() {
-    [...this.element.offcanvasOpen].forEach(element => {
+    [...this.elements.offcanvasOpen].forEach(element => {
       element.addEventListener('click', this.open.bind(this));
     });
 
-    [...this.element.offcanvasClose].forEach(element => {
+    [...this.elements.offcanvasClose].forEach(element => {
       element.addEventListener('click', this.close.bind(this));
     });
   }
@@ -28,17 +28,17 @@ class Offcanvas extends Uny {
   // Add `.is-active` to `.offcanvas` class.
   //
   open() {
-    this.element.offcanvas[0].classList.add('is-active');
-    this.element.body.style.overflow = 'hidden';
+    this.elements.offcanvas[0].classList.add('is-active');
+    this.elements.body.style.overflow = 'hidden';
   }
 
   //
   // Remove `.is-active` from `.offcanvas` class.
   //
   close() {
-    if (this.element.offcanvas[0].classList.contains('is-active')) {
-      this.element.offcanvas[0].classList.remove('is-active');
-      this.element.body.style.overflow = 'visible';
+    if (this.elements.offcanvas[0].classList.contains('is-active')) {
+      this.elements.offcanvas[0].classList.remove('is-active');
+      this.elements.body.style.overflow = 'visible';
     }
   }
 }
