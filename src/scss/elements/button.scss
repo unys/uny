@@ -54,7 +54,7 @@ $button-icon-size:  3em !default;
   }
 
   &:active {
-    @include button-active();
+    @include outline-active();
   }
 
 
