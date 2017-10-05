@@ -8,118 +8,267 @@
 // -----------------------------------
 
 
-$base-color:       #263238 !default;
-$base-color-white: #fff !default;
+$theme-color:            #263238 !default;
+$theme-color-accent:     #607d8b !default;
+$theme-color-light:      #37474f !default;
+$theme-color-text:       #f2f2f2 !default;
+$theme-color-link:       #1976d2 !default;
+$theme-color-background: color($theme-color-text a(.1)) !default;
+
+$theme-gradation-color-start: $theme-color !default;
+$theme-gradation-color-end:   $theme-color-accent !default;
 
 
 //
-// Header, Footer
+// Core
 //
+
+::-webkit-input-placeholder,
+::-moz-placeholder,
+:-ms-input-placeholder,
+:-moz-placeholder {
+  color: color($theme-color-text a(.3));
+}
+
+a { color: $theme-color-link; }
+
+hr { background-color: $theme-color-light; }
+
+body {
+  background-color: $theme-color;
+  color: $theme-color-text;
+}
+
+
+//
+// Elements
+//
+
+.logo {
+  color: $theme-color-text;
+
+  a {
+    color: $theme-color-text;
+  }
+}
+
+.button {
+  background-color: $theme-color-accent;
+  border-color: $theme-color-accent;
+
+  &.is-burger,
+  &.is-close {
+    span {
+      background-color: $theme-color-text;
+    }
+  }
+}
+
+.input {
+  &:not(label) {
+    background-color: $theme-color-background;
+    border-color: transparent;
+    color: $theme-color-text;
+
+    &:focus {
+      border-color: $theme-color-link;
+      box-shadow: 0 0 4px $theme-color-link;
+    }
+  }
+
+  &.is-file {
+    background-color: $theme-color-accent;
+    border-color: $theme-color-accent;
+    color: $theme-color-text;
+  }
+
+  &.is-select {
+    background-color: $theme-color-accent;
+
+    &:after {
+      color: $theme-color-text;
+    }
+
+    > select {
+      color: $theme-color-text;
+      border-color: $theme-color-accent;
+    }
+  }
+
+  &.is-checkbox {
+    &:hover {
+      > span {
+        &:before {
+          border-color: $theme-color-accent;
+        }
+      }
+    }
+
+    > input[type=checkbox] {
+      &:checked {
+        & + span {
+          &:before {
+            background-color: $theme-color-accent;
+            border-color: $theme-color-accent;
+          }
+        }
+      }
+    }
+  }
+
+  &.is-radio {
+    &:hover {
+      > span {
+        &:before {
+          border-color: $theme-color-accent;
+        }
+      }
+    }
+
+    > input[type=radio] {
+      &:checked {
+        & + span {
+          &:before {
+            background-color: $theme-color-accent;
+            border-color: $theme-color-accent;
+          }
+        }
+      }
+    }
+  }
+}
+
+.input-filename {
+  color: color($theme-color-text a(.5));
+}
+
+.is-gradation {
+  background: linear-gradient(270deg, $theme-gradation-color-start, $theme-gradation-color-end);
+  background-size: 200% 200%;
+  animation: isGradation 5s ease infinite;
+  color: $theme-color-text;
+
+  a {
+    color: $theme-color-text;
+  }
+}
+
+@keyframes isGradation {
+  0%{
+    background-position: 0% 50%;
+  }
+  50%{
+    background-position: 100% 50%;
+  }
+  100%{
+    background-position: 0% 50%;
+  }
+}
+
+
+//
+// Components
+//
+
+.content {
+  background-color: $base-color;
+}
+
+.section {
+  & + .section {
+    border-top-color: $theme-color-light;
+  }
+
+  &.is-gray {
+    background-color: $theme-color-light;
+  }
+}
 
 .header,
 .footer {
-  background-color: $base-color !important;
-  color: $base-color-white !important;
+  background-color: $theme-color-light;
+}
 
+.header {
+  &.is-sticky {
+    background-color: $theme-color-light;
+  }
+}
+
+.header-menu {
   a {
     &:not(.button) {
-      color: $base-color-white !important;
-    }
-    &.is-current {
-      border-left-color: $base-color-white;
-      &:before {
-        background-color: $base-color-white;
-      }
+      color: $theme-color-text;
     }
   }
 }
-
-
-//
-// Main
-//
-
-.main {
-  background-color: color($base-color a(.95));
-  color: white !important;
-
-  a {
-    color: white !important;
-  }
-}
-
-
-//
-// Section
-//
-
-.section {
-  &:nth-of-type(even) {
-    background-color: color($base-color a(.95)) !important;
-  }
-}
-
-
-//
-// Card
-//
 
 .card {
-  border-color: color($base-color-white a(.1)) !important;
-  background-color: $base-color !important;
-  color: $base-color-white !important;
-}
+  background-color: $theme-color;
+  border-color: $theme-color-light;
 
-
-//
-// Tree
-//
-
-.tree {
-  ul,
-  ol {
-    ul,
-    ol {
-      border-left-color: color($base-color-white a(.1));
+  &.is-clickable {
+    > * {
+      color: $theme-color-text;
     }
   }
 
-  li {
-    &.is-current {
-      > a {
-        color: $base-color-white !important;
-        background-color: $base-color !important;
+  &.is-skeleton {
+    border-color: $theme-color-light;
+
+    > * {
+      color: color($theme-color-text a(.3));
+    }
+  }
+}
+
+.offcanvas {
+  .offcanvas-content {
+    background-color: $theme-color;
+  }
+
+  .offcanvas-menu {
+    a:not(.button) {
+      color: $theme-color-text;
+    }
+  }
+}
+
+.sidebar {
+  &:first-child {
+    border-color: $theme-color-light;
+  }
+
+  &:not(:first-child) {
+    border-color: $theme-color-light;
+  }
+
+  @include screen-medium() {
+    &:first-child {
+      border-color: $theme-color-light;
+    }
+
+    &:not(:first-child) {
+      border-color: $theme-color-light;
+    }
+  }
+}
+
+.tab {
+  .tab-list {
+    border-color: $theme-color-light;
+
+    a {
+      background-color: $theme-color;
+      border-color: $theme-color-light;
+      color: $theme-color-text;
+
+      &.is-current {
+        color: $theme-color-link;
       }
     }
   }
-}
-
-
-//
-// Code
-//
-
-pre {
-  code {
-    border-color: color($base-color-white a(.1));
+  .tab-content {
+    border-color: $theme-color-light;
   }
-}
-
-
-//
-// Hr
-//
-
-hr {
-  background-color: color($base-color-white a(.2));
-}
-
-
-//
-// Button
-//
-
-.button {
-  background-color: $base-color !important;
-  border-color: color($base-color-white a(.1)) !important;
 }
