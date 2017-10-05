@@ -207,18 +207,9 @@ textarea {
   font: inherit;
 }
 
-::-webkit-input-placeholder {
-  color: color($base-color-text a(.3));
-}
-
-::-moz-placeholder {
-  color: color($base-color-text a(.3));
-}
-
-:-ms-input-placeholder {
-  color: color($base-color-text a(.3));
-}
-
+::-webkit-input-placeholder,
+::-moz-placeholder,
+:-ms-input-placeholder,
 :-moz-placeholder {
   color: color($base-color-text a(.3));
 }

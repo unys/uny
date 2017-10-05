@@ -3,8 +3,8 @@
 // -----------------------------------
 
 
-$gradation-color-background-start: #ff6e40 !default;
-$gradation-color-background-end:   #ffa000 !default;
+$gradation-color-start: #ff6e40 !default;
+$gradation-color-end:   #ffa000 !default;
 
 
 //
@@ -99,7 +99,7 @@ $gradation-color-background-end:   #ffa000 !default;
 //
 
 .is-gradation {
-  background: linear-gradient(270deg, $gradation-color-background-start, $gradation-color-background-end);
+  background: linear-gradient(270deg, $gradation-color-start, $gradation-color-end);
   background-size: 200% 200%;
   animation: isGradation 5s ease infinite;
   color: #fff;

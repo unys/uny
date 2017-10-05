@@ -44,7 +44,7 @@ $pager-item-color-background-current: $base-color-brand !default;
       text-decoration: none;
 
       &:active {
-        @include button-active();
+        @include outline-active();
       }
     }
 

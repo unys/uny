@@ -43,20 +43,20 @@
 
 
 //
-// Button active
+// Outline active
 //
 
-@mixin button-active() {
+@mixin outline-active() {
   box-shadow: $base-shadow-active;
 }
 
 
 //
-// Button focus
+// Outline focus
 //
 
-@mixin button-focus() {
+@mixin outline-focus() {
   border-color: $base-color-link;
-  box-shadow: $input-shadow-focus;
+  box-shadow: 0 0 4px $base-color-link;
   z-index: 1;
 }
