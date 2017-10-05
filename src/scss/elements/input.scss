@@ -14,7 +14,8 @@ $input-textarea-min-height: 6.25rem !default;
 
 
 @mixin input() {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   letter-spacing: normal;
   font-weight: $base-font-weight-medium;
   font-size: $base-font-size;
@@ -246,7 +247,5 @@ $input-textarea-min-height: 6.25rem !default;
 .input-filename {
   color: color($base-color-text a(.5));
   font-size: $base-font-size-small;
-  border-top: 1px dashed $base-color-border;
-  margin-top: .5rem;
-  padding-top: .5rem;
+  padding-left: 1rem;
 }
