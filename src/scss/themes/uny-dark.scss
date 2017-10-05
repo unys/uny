@@ -23,9 +23,18 @@ $theme-gradation-color-end:   $theme-color-accent !default;
 // Core
 //
 
-::-webkit-input-placeholder,
-::-moz-placeholder,
-:-ms-input-placeholder,
+::-webkit-input-placeholder {
+  color: color($theme-color-text a(.3));
+}
+
+::-moz-placeholder {
+  color: color($theme-color-text a(.3));
+}
+
+:-ms-input-placeholder {
+  color: color($theme-color-text a(.3));
+}
+
 :-moz-placeholder {
   color: color($theme-color-text a(.3));
 }
@@ -165,6 +174,10 @@ body {
   }
 }
 
+blockquote {
+  border-color: $theme-color-light;
+}
+
 
 //
 // Components
@@ -205,7 +218,7 @@ body {
 
 .card {
   background-color: $theme-color;
-  border-color: $theme-color-light;
+  border-color: $theme-color-accent;
 
   &.is-clickable {
     > * {
@@ -271,4 +284,42 @@ body {
   .tab-content {
     border-color: $theme-color-light;
   }
+}
+
+.navbar {
+  a {
+    &:not(.button) {
+      color: $theme-color-text;
+    }
+
+    &.is-current {
+      background-color: $theme-color-accent;
+    }
+  }
+}
+
+.tree {
+  ul,
+  ol {
+    ul,
+    ol {
+      border-color: $theme-color-light;
+    }
+
+    > li {
+      a {
+        color: $theme-color-text;
+      }
+
+      &.is-current {
+        > a {
+          background-color: $theme-color-accent;
+        }
+      }
+    }
+  }
+}
+
+.hero {
+  background-color: $theme-color-accent;
 }
