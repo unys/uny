@@ -10,7 +10,7 @@
 
 $theme-color:            #263238 !default;
 $theme-color-accent:     #607d8b !default;
-$theme-color-light:      #37474f !default;
+$theme-color-border:     #37474f !default;
 $theme-color-text:       #f2f2f2 !default;
 $theme-color-link:       #1976d2 !default;
 $theme-color-background: color($theme-color-text a(.1)) !default;
@@ -41,7 +41,7 @@ $theme-gradation-color-end:   $theme-color-accent !default;
 
 a { color: $theme-color-link; }
 
-hr { background-color: $theme-color-light; }
+hr { background-color: $theme-color-border; }
 
 body {
   background-color: $theme-color;
@@ -78,6 +78,10 @@ body {
     background-color: $theme-color-background;
     border-color: transparent;
     color: $theme-color-text;
+
+    &:hover {
+      border-color: $theme-color-background;
+    }
 
     &:focus {
       border-color: $theme-color-link;
@@ -175,7 +179,7 @@ body {
 }
 
 blockquote {
-  border-color: $theme-color-light;
+  border-color: $theme-color-border;
 }
 
 
@@ -189,22 +193,22 @@ blockquote {
 
 .section {
   & + .section {
-    border-top-color: $theme-color-light;
+    border-top-color: $theme-color-border;
   }
 
   &.is-gray {
-    background-color: $theme-color-light;
+    background-color: $theme-color-border;
   }
 }
 
 .header,
 .footer {
-  background-color: $theme-color-light;
+  background-color: $theme-color-border;
 }
 
 .header {
   &.is-sticky {
-    background-color: $theme-color-light;
+    background-color: $theme-color-border;
   }
 }
 
@@ -227,7 +231,7 @@ blockquote {
   }
 
   &.is-skeleton {
-    border-color: $theme-color-light;
+    border-color: $theme-color-border;
 
     > * {
       color: color($theme-color-text a(.3));
@@ -249,31 +253,31 @@ blockquote {
 
 .sidebar {
   &:first-child {
-    border-color: $theme-color-light;
+    border-color: $theme-color-border;
   }
 
   &:not(:first-child) {
-    border-color: $theme-color-light;
+    border-color: $theme-color-border;
   }
 
   @include screen-medium() {
     &:first-child {
-      border-color: $theme-color-light;
+      border-color: $theme-color-border;
     }
 
     &:not(:first-child) {
-      border-color: $theme-color-light;
+      border-color: $theme-color-border;
     }
   }
 }
 
 .tab {
   .tab-list {
-    border-color: $theme-color-light;
+    border-color: $theme-color-border;
 
     a {
       background-color: $theme-color;
-      border-color: $theme-color-light;
+      border-color: $theme-color-border;
       color: $theme-color-text;
 
       &.is-current {
@@ -282,7 +286,7 @@ blockquote {
     }
   }
   .tab-content {
-    border-color: $theme-color-light;
+    border-color: $theme-color-border;
   }
 }
 
@@ -303,7 +307,7 @@ blockquote {
   ol {
     ul,
     ol {
-      border-color: $theme-color-light;
+      border-color: $theme-color-border;
     }
 
     > li {
@@ -322,4 +326,12 @@ blockquote {
 
 .hero {
   background-color: $theme-color-accent;
+}
+
+.field {
+  .button {
+    color: $theme-color-text;
+    background-color: $theme-color-accent;
+    border-color: $theme-color-accent;
+  }
 }
