@@ -25,6 +25,7 @@ table,
 }
 
 .table {
+  -webkit-overflow-scrolling: touch;
   overflow-x: scroll;
 
   > table {

@@ -1,3 +1,8 @@
+# v0.1.8 - 2017-10-05
+
+- Add `form` styles and js
+- Add `.table > table` styles (scroll table)
+
 # v0.1.7 - 2017-10-04
 
 - Add `table` styles

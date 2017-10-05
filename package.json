@@ -1,6 +1,6 @@
 {
   "name": "uny",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "",
   "main": "index.js",
   "repository": "https://github.com/unys/uny.git",
@@ -15,7 +15,7 @@
     "build:js": "NODE_ENV=production rollup src/js/uny.js -o dist/js/uny.min.js -f iife -c",
     "build": "postcss src/scss/uny.scss -o docs/css/uny.css && postcss src/scss/themes/*.scss -d docs/css -x css && npm run build:css && npm run build:theme && npm run build:js",
     "server": "http-server ./docs",
-    "deploy": "np --no-cleanup"
+    "deploy": "npm run build && np --no-cleanup"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.3",
