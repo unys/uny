@@ -26,12 +26,10 @@ $tabbar-color-default:     #fff !default;
 
   @include screen-medium() {
     min-height: $tabbar-min-height-medium;
-    padding: $tabbar-margin-medium;
   }
 
   @include screen-large() {
     min-height: $tabbar-min-height-large;
-    padding: $tabbar-margin-large;
   }
 
   > .inner {
