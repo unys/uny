@@ -4,7 +4,6 @@
 
 
 $input-padding:            .5rem .75rem !default;
-$input-shadow-focus:       0 0 4px $base-color-link !default;
 $input-border:             1px solid $base-color-button-border !default;
 $input-border-radius:      $base-border-radius-small !default;
 $input-border-color-hover: color(#000 a(.3)) !default;
@@ -27,7 +26,7 @@ $input-textarea-min-height: 6.25rem !default;
   }
 
   &:focus {
-    @include button-focus();
+    @include outline-focus();
   }
 }
 
@@ -82,7 +81,7 @@ $input-textarea-min-height: 6.25rem !default;
           &:before {
             background-color: $base-color-brand;
             border-color: $base-color-brand;
-            @include button-active();
+            @include outline-active();
           }
 
           &:after {
@@ -142,7 +141,7 @@ $input-textarea-min-height: 6.25rem !default;
           &:before {
             background-color: $base-color-brand;
             border-color: $base-color-brand;
-            @include button-active();
+            @include outline-active();
           }
 
           &:after {
@@ -168,6 +167,7 @@ $input-textarea-min-height: 6.25rem !default;
     position: relative;
     display: inline-block;
     background-color: #fff;
+    border-radius: $input-border-radius;
 
     &:after {
       content: "...";
@@ -176,6 +176,7 @@ $input-textarea-min-height: 6.25rem !default;
       top: 50%;
       right: .875rem;
       margin-top: -1rem;
+      color: $base-color-text;
     }
 
     > select {
@@ -197,10 +198,12 @@ $input-textarea-min-height: 6.25rem !default;
     @include input();
     min-height: 2.625rem;
     padding: .5rem 1.25rem;
+    background-color: #fff;
+    color: $base-color-text;
     cursor: pointer;
 
     &:active {
-      @include button-active();
+      @include outline-active();
     }
 
     input[type=file] {
