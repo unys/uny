@@ -2,16 +2,70 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Test: Theme - Dark</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UNY - A modern CSS framework</title>
+  <meta name="description" content="UNY is CSS framework with a modern atmosphere.">
+  <meta name="author" content="kokushin">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link rel="stylesheet" href="../css/uny.css">
   <link rel="stylesheet" href="../css/uny-dark.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+  <style>
+    .fa {
+      margin-right: .25em;
+    }
+    .button.is-icon .fa,
+    .button.is-round .fa {
+      margin-right: 0;
+    }
+    .header .menu {
+      margin-left: auto;
+      margin-right: 2.5rem;
+    }
+    .uny-logo:before {
+      content: "Uny";
+      font-size: 8rem;
+      line-height: 1;
+      color: #fff;
+      font-weight: 300;
+    }
+    @media screen and (min-width: 768px) {
+      .uny-logo:before {
+        font-size: 12.5rem;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="header is-sticky">
-    <h1 class="logo is-small">Dark</h1>
-    <p>Wellcome to dark side.</p>
+    <h1 class="logo is-medium">UNY</h1>
+    <nav class="header-menu">
+      <div class="pulldown">
+        <a href="javascript:void(0);">Language <i class="fa fa-angle-down"></i></a>
+        <div class="pulldown-content">
+          <a href="./" class="button is-list">English</a>
+          <a href="./index_ja.html" class="button is-list">日本語</a>
+        </div>
+      </div>
+      <div class="pulldown">
+        <a href="javascript:void(0);">Document</a>
+        <div class="pulldown-content">
+          <p>Coming soon ;)</p>
+        </div>
+      </div>
+      <div class="pulldown">
+        <a href="javascript:void(0);">Theme</a>
+        <div class="pulldown-content">
+          <p>Coming soon ;)</p>
+        </div>
+      </div>
+      <a href="https://github.com/unys/uny" class="button is-white is-small"><i class="fa fa-github"></i> GitHub</a>
+      <a href="https://github.com/unys/uny/archive/master.zip" class="button is-small"><i class="fa fa-download"></i> Download</a>
+    </nav>
     <button class="button is-burger hide-on-medium hide-on-large offcanvas-open">
       <span></span>
       <span></span>
@@ -19,138 +73,151 @@
     </button>
   </header>
 
-  <div class="hero is-center">
-    <div class="type-xxlarge">Dark</div>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>
-      Quis asperiores eveniet perspiciatis ab, corrupti laboriosam necessitatibus cumque! <br>Sed, accusamus earum?</p>
-    <div class="hero-image" style="background-image:url(https://source.unsplash.com/XO9uCZZaipE)"></div>
+  <div class="hero is-center is-gradation">
+    <div class="uny-logo"></div>
+    <div class="type-h1">It's modern CSS framework. <small>Beta</small></div>
+    <p>UNY is a simple CSS framework. In addition to the basic components such as cards and buttons, <br>it is also possible to extend theme files.</p>
+    <p><a href="./demos/" class="button is-white is-medium"><i class="fa fa-arrow-right"></i> Demos</a></p>
   </div>
 
   <main class="main">
-
     <div class="content">
-      <div class="section is-center is-gradation">
-        <div class="inner is-small">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo sint laborum eum tempore consectetur molestiae magni architecto excepturi laudantium consequatur?</p>
-          <p><a href="#" class="button is-ghost">Button</a></p>
-        </div>
-      </div>
-
       <section class="section">
+        <div class="inner is-small">
+          <h2><i class="fa fa-check"></i> Feature</h2>
+          <h3>Various components</h3>
+          <p>I will show you some of the components that can be expressed in UNY. <br>Various things such as buttons and form parts that can be used by itself, things such as lists and cards that can be used as a set.</p>
+          <h4>Button</h4>
+          <div class="grid is-col-center is-row-middle">
+            <div>
+              <a href="#" class="button">Button</a>
+            </div>
+            <div>
+              <a href="#" class="button is-white">Button</a>
+            </div>
+            <div>
+              <a href="#" class="button is-small"><i class="fa fa-home"></i> Home</a>
+            </div>
+            <div>
+              <a href="#" class="button is-white is-large">Button</a>
+            </div>
+            <div>
+              <a href="#" class="button is-icon"><i class="fa fa-home"></i> Home</a>
+            </div>
+            <div>
+              <a href="#" class="button is-round"><i class="fa fa-plus"></i></a>
+            </div>
+          </div>
+          <h4>Form parts</h4>
+          <div class="grid is-col-center is-row-middle">
+            <div>
+              <input class="input" type="text" placeholder="text">
+            </div>
+            <div>
+              <div class="field">
+                <input class="input" type="text" placeholder="Search">
+                <button class="button"><i class="fa fa-search"></i></button>
+              </div>
+            </div>
+            <div>
+              <label class="input is-checkbox" for="checkbox-1">
+                <input type="checkbox" name="" id="checkbox-1">
+                <span>Checkbox</span>
+              </label>
+            </div>
+            <div>
+              <label class="input is-radio" for="radio-1">
+                <input type="radio" name="radio" id="radio-1">
+                <span>Radio</span>
+              </label>
+            </div>
+          </div>
+          <h4>Tree type list, Card</h4>
+          <div class="grid is-col-medium-2 is-center is-middle">
+            <div>
+              <div class="tree">
+                <ul>
+                  <li><a href="#">Introduction</a></li>
+                  <li><a href="#">Download</a></li>
+                  <li><a href="#">Usgae</a></li>
+                  <li class="is-parent is-current"><a href="#">Components</a>
+                    <ul>
+                      <li><a href="#">Header</a></li>
+                      <li><a href="#">Footer</a></li>
+                      <li><a href="#">Layout</a></li>
+                      <li><a href="#">Menu</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div>
+              <div class="card">
+                <div class="card-image" style="background-image: url(https://source.unsplash.com/random);"></div>
+                <h3>Heading</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae, debitis.</p>
+                <p><a href="#" class="button">Download</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section is-center is-gradation">
         <div class="inner">
-          <h2>Wellcome to dark side.</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, consequatur.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus similique ducimus vel distinctio eius perferendis quod nihil? Ipsa aperiam quos quo porro, quae sit neque? Id non vitae consequatur repellendus sapiente, molestiae explicabo sunt laboriosam reprehenderit quia alias labore incidunt!</p>
-          <figure>
-            <img src="https://source.unsplash.com/XO9uCZZaipE" width="400" alt="">
-            <figcaption><i class="fa fa-camera"></i> Photo by <a href="#">unsplash</a></figcaption>
-          </figure>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur repellendus quos, placeat corporis delectus laborum porro ullam beatae aliquam impedit!</p>
+          <h2>Learn more</h2>
+          <p>If you want to check all the components included in version 0.1 (beta version), <br>please see the following page.</p>
+          <p><a href="./demos/" class="button is-ghost is-medium"><i class="fa fa-arrow-right"></i> Demos</a></p>
         </div>
       </section>
 
       <section class="section">
         <div class="inner is-small">
-          <h2>Contact</h2>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium, amet!</p>
-          <form class="form" action="#">
-            <div>
-              <label for="text-1-1" class="label">Name</label>
-              <div class="field">
-                <input type="text" class="input" id="text-1-1">
-              </div>
-            </div>
-            <div>
-              <div class="unit">
-                <div>
-                  <label for="name-1-1" class="label">Name 1</label>
-                  <div class="field">
-                    <input type="text" class="input" id="name-1-1">
-                  </div>
-                </div>
-                <div>
-                  <label for="name-2-1" class="label">Name 2</label>
-                  <div class="field">
-                    <input type="text" class="input" id="name-2-1">
-                  </div>
-                </div>
-                <div>
-                  <label for="name-3-1" class="label">Name 3</label>
-                  <div class="field">
-                    <input type="text" class="input" id="name-3-1">
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div>
-              <label for="key-1-1" class="label">Key</label>
-              <div class="field">
-                <input type="text" class="input" id="key-1-1" placeholder="XXXX">
-                <input type="text" class="input" id="key-2-1" placeholder="XXXX">
-                <input type="text" class="input" id="key-3-1" placeholder="XXXX">
-              </div>
-            </div>
-            <div>
-              <label for="text-2-1" class="label">Address</label>
-              <div class="field">
-                <input type="text" class="input" id="text-2-1">
-              </div>
-            </div>
-            <div>
-              <div class="field">
-                <label for="radio-1-1" class="input is-radio">
-                  <input type="radio" name="radio" id="radio-1-1">
-                  <span>Radio button 1</span>
-                </label>
-                <label for="radio-2-1" class="input is-radio">
-                  <input type="radio" name="radio" id="radio-2-1">
-                  <span>Radio button 2</span>
-                </label>
-                <label for="radio-3-1" class="input is-radio">
-                  <input type="radio" name="radio" id="radio-3-1">
-                  <span>Radio button 3</span>
-                </label>
-              </div>
-            </div>
-            <div>
-              <label for="textarea-1-1" class="label">Message</label>
-              <div class="field">
-                <textarea class="input is-textarea" id="textarea-1-1"></textarea>
-              </div>
-            </div>
-            <div>
-              <div class="field">
-                <label for="file-1-1" class="input is-file">
-                  <input type="file" id="file-1-1">
-                  <span><i class="fa fa-cloud-upload"></i> Upload files</span>
-                </label>
-              </div>
-            </div>
-            <div>
-              <div class="field">
-                <label for="agree-1-1" class="input is-checkbox">
-                  <input type="checkbox" id="agree-1-1">
-                  <span>Agree</span>
-                </label>
-              </div>
-            </div>
-            <div>
-              <button class="button is-col-full" type="submit">Send message</button>
-              <button class="button is-col-full is-white" type="submit">Back</button>
-            </div>
-          </form>
+          <h2><i class="fa fa-bolt"></i> Quick start</h2>
+          <h3>Using CDN</h3>
+          <p>In addition to downloading and loading CSS and JS files, <br>you can easily start by using CDN.</p>
+          <p>Add the following description in the <code>&lt;head&gt;</code> tag of the web page you want to use UNY.</p>
+          <pre><code class="html">&lt;link rel="stylesheet" href="https://unpkg.com/uny@latest/dist/css/uny.min.css"&gt;
+&lt;script src="https://unpkg.com/uny@latest/dist/js/uny.min.js"&gt;&lt;/script&gt;</code></pre>
+          <p>Write the HTML tag of the component you want to use.</p>
+          <pre><code class="html">&lt;div class="card"&gt;
+  &lt;div class="card-image" style="background-image: url(https://source.unsplash.com/random);"&gt;&lt;/div&gt;
+  &lt;h3&gt;Heading&lt;/h3&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae, debitis.&lt;/p&gt;
+  &lt;p&gt;&lt;a href="#" class="button"&gt;Download&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+          <p>This alone displays the card type component with the image embedded 🎉</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="inner is-small">
+          <h2><i class="fa fa-book"></i> Document</h2>
+          <p>Usage, introduction of other functions, component introduction etc. <br>are described in detail in the document. <br>Two kinds of documents are prepared, English and Japanese.</p>
+          <p><a href="#" class="button is-disabled"><i class="fa fa-book"></i> Coming soon ;)</a></p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="inner is-small">
+          <h2><i class="fa fa-github"></i> View on GitHub</h2>
+          <p>UNY was developed by <a href="https://twitter.com/kokushing">@kokushing</a> and is open source (MIT license) on GitHub.<br>Please send us feedback, requests, bug reports and pull requests!</p>
+          <p>If you like it, please press Star ;)</p>
+          <p><a href="https://github.com/unys/uny" class="button"><i class="fa fa-github"></i> GitHub page</a></p>
         </div>
       </section>
     </div>
-
   </main>
 
   <footer class="footer">
-    <div class="logo is-medium">Dark</div>
-    <div>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, aliquam?</p>
+    <div class="inner">
+      <div class="logo is-medium">UNY <small>Beta</small></div>
+      <div class="margin-left-small margin-right-small">
+        <p>A modern CSS framework. <br>UNY is provided with <a href="https://github.com/unys/uny/blob/master/LICENSE">MIT license.</a> Made by @kokushin &hearts; OSS</p>
+        <p>Icon fonts by Font Awesome, Photo by Unsplash</p>
+      </div>
+      <small class="copyright">&copy; 2017 UNY</small>
     </div>
-    <small class="copyright">&copy; 2017 Dark</small>
   </footer>
 
   <div class="offcanvas">
@@ -163,11 +230,13 @@
       </button>
       <div class="inner">
         <div class="offcanvas-menu">
-          <a href="#">Menu1</a>
-          <a href="#">Menu2</a>
-          <a href="#">Menu3</a>
-          <a href="#">Menu4</a>
-          <a href="#">Menu5</a>
+          <a class="is-current" href="./">English</a>
+          <a href="./index_ja.html">日本語</a>
+          <hr>
+          <a href="https://github.com/unys/uny" class="button is-white is-small"><i class="fa fa-github"></i> GitHub</a>
+          <a href="https://github.com/unys/uny/archive/master.zip" class="button is-small"><i class="fa fa-download"></i> Download</a>
+          <hr>
+          <p>version 0.1-beta</p>
         </div>
       </div>
     </div>
