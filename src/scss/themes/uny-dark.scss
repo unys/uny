@@ -110,6 +110,10 @@ figure {
       border-color: $theme-color-light;
     }
   }
+
+  &.is-icon {
+    color: $theme-color-text;
+  }
 }
 
 table {
