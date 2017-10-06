@@ -58,7 +58,7 @@ $sidebar-sticky-offset-top: 2.5rem !default;
     > .inner {
       position: sticky;
       top: calc(3.75rem + $sidebar-sticky-offset-top);
-      z-index: 2;
+      z-index: 9999;
 
       @include screen-medium() {
         top: calc(4.25rem + $sidebar-sticky-offset-top);

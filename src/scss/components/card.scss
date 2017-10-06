@@ -3,13 +3,13 @@
 // -----------------------------------
 
 
-$card-max-width:     35em !default;
-$card-background:    white !default;
-$card-padding:       2.5rem 2rem !default;
-$card-border:        2px solid $base-color-border !default;
-$card-border-radius: $base-border-radius !default;
-$card-shadow:        $base-shadow !default;
-$card-image-height:  200px !default;
+$card-max-width:       35em !default;
+$card-background:      white !default;
+$card-padding:         2.5rem 2rem !default;
+$card-border:          1px solid $base-color-button-border !default;
+$card-border-radius:   $base-border-radius !default;
+$card-image-height:    200px !default;
+$card-skeleton-border: 2px dashed $base-color-button-border !default;
 
 
 .card {
@@ -42,11 +42,11 @@ $card-image-height:  200px !default;
   // Type: Skeleton
 
   &.is-skeleton {
-    border: 2px dashed $base-color-border;
-    color: color($base-color-text a(.3));
+    border: $card-skeleton-border;
+    color: color($base-color-text a(.5));
 
     > * {
-      color: color($base-color-text a(.3));
+      color: color($base-color-text a(.5));
     }
   }
 
@@ -58,7 +58,7 @@ $card-image-height:  200px !default;
   }
 
 
-  // Align: Center
+  // Centering alignment
 
   &.is-center {
     display: flex;
@@ -77,7 +77,7 @@ $card-image-height:  200px !default;
   }
 
 
-  // Size: Full
+  // Display in full column
 
   &.is-col-full {
     max-width: 100%;

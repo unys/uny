@@ -12,7 +12,7 @@ $offcanvas-color-background: #fff !default;
 
 .offcanvas {
   position: relative;
-  z-index: 5;
+  z-index: 25999;
 }
 
 .offcanvas-content {
@@ -21,7 +21,7 @@ $offcanvas-color-background: #fff !default;
   position: fixed;
   top: 0;
   right: 0;
-  z-index: 1;
+  z-index: 5999;
   width: $offcanvas-width;
   height: 100%;
   -webkit-overflow-scrolling: touch;
@@ -41,7 +41,7 @@ $offcanvas-color-background: #fff !default;
     position: absolute;
     top: 1.25rem;
     right: 1.25rem;
-    z-index: 1;
+    z-index: 5999;
   }
 }
 

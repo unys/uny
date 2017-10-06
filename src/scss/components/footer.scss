@@ -16,7 +16,7 @@ $footer-color-background:    #fff;
   box-shadow: $base-shadow;
   background-color: $footer-color-background;
   position: relative;
-  z-index: 1;
+  z-index: 5999;
 
   @include screen-medium() {
     padding: $footer-margin-medium;
@@ -81,7 +81,7 @@ $footer-color-background:    #fff;
   }
 
 
-  // Align: Center
+  // Centering alignment
 
   &.is-center {
     text-align: center;

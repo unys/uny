@@ -7,7 +7,6 @@ $button-min-width:        8em !default;
 $button-margin:           .75em 2em !default;
 $button-margin-large:     1em 3em !default;
 $button-border-radius:    4em !default;
-$button-color-text:       #fff !default;
 $button-color-background: $base-color-brand !default;
 $button-border:           1px solid $button-color-background !default;
 $button-shadow:           $base-shadow !default;
@@ -20,8 +19,6 @@ $button-font-size-xlarge: $base-font-size-xlarge !default;
 $burger-bar-width:  24px !default;
 $burger-bar-height: 1px !default;
 $burger-bar-color:  #000 !default;
-
-$button-ghost-border: 1px solid #fff !default;
 
 $button-icon-size:  3em !default;
 
@@ -40,7 +37,7 @@ $button-icon-size:  3em !default;
   padding: $button-margin;
   border-radius: $button-border-radius;
   text-align: center;
-  color: $button-color-text;
+  color: #fff;
   background-color: $button-color-background;
   border: $button-border;
   text-decoration: none;
@@ -58,37 +55,37 @@ $button-icon-size:  3em !default;
   }
 
 
-  // Size: Small
+  // Small size
 
   &.is-small {
     font-size: $button-font-size-small;
   }
 
 
-  // Size: Medium
+  // Medium size
 
   &.is-medium {
     font-size: $base-font-size-medium;
   }
 
 
-  // Size: Large
+  // Large size
 
   &.is-large {
     font-size: $base-font-size-large;
   }
 
 
-  // Color: White
+  // White color
 
   &.is-white {
     background-color: #fff;
-    border-color: $base-color-border;
+    border-color: $base-color-button-border;
     color: $base-color-text;
   }
 
 
-  // Color: Black
+  // Black color
 
   &.is-black {
     background-color: #000;
@@ -97,7 +94,7 @@ $button-icon-size:  3em !default;
   }
 
 
-  // Color: Primary
+  // Primary color
 
   &.is-primary {
     background-color: $base-color-primary;
@@ -106,7 +103,7 @@ $button-icon-size:  3em !default;
   }
 
 
-  // Color: Secondary
+  // Secondary color
 
   &.is-secondary {
     background-color: $base-color-secondary;
@@ -115,7 +112,7 @@ $button-icon-size:  3em !default;
   }
 
 
-  // Color: Success
+  // Success color
 
   &.is-success {
     background-color: $base-color-success;
@@ -124,16 +121,7 @@ $button-icon-size:  3em !default;
   }
 
 
-  // Color: Danger
-
-  &.is-danger {
-    background-color: $base-color-danger;
-    border-color: $base-color-danger;
-    color: #fff;
-  }
-
-
-  // Color: Warning
+  // Warning color
 
   &.is-warning {
     background-color: $base-color-warning;
@@ -142,25 +130,108 @@ $button-icon-size:  3em !default;
   }
 
 
-  // Color: Ghost
+  // Danger color
 
-  &.is-ghost {
-    background-color: transparent;
-    border: $button-ghost-border;
+  &.is-danger {
+    background-color: $base-color-danger;
+    border-color: $base-color-danger;
+    color: #fff;
   }
 
 
-  // Color: Disabled
+  // Disabled color
 
   &.is-disabled {
-    color: #999;
+    color: $base-color-disabled;
     background-color: $base-color-light;
     border-color: $base-color-border;
     cursor: not-allowed;
   }
 
 
-  // Type: Icon
+  // Ghost color
+
+  &.is-ghost {
+    background-color: transparent;
+    border-color: $base-color-brand;
+    color: $base-color-brand;
+  }
+
+
+  // Ghost color (white)
+
+  &.is-ghost-white {
+    background-color: transparent;
+    border-color: #fff;
+    color: #fff;
+  }
+
+
+  // Ghost color (black)
+
+  &.is-ghost-black {
+    background-color: transparent;
+    border-color: #000;
+    color: #000;
+  }
+
+
+  // Ghost color (primary)
+
+  &.is-ghost-primary {
+    background-color: transparent;
+    border-color: $base-color-primary;
+    color: $base-color-primary;
+  }
+
+
+  // Ghost color (secondary)
+
+  &.is-ghost-secondary {
+    background-color: transparent;
+    border-color: $base-color-secondary;
+    color: $base-color-secondary;
+  }
+
+
+  // Ghost color (success)
+
+  &.is-ghost-success {
+    background-color: transparent;
+    border-color: $base-color-success;
+    color: $base-color-success;
+  }
+
+
+  // Ghost color (warning)
+
+  &.is-ghost-warning {
+    background-color: transparent;
+    border-color: $base-color-warning;
+    color: $base-color-warning;
+  }
+
+
+  // Ghost color (danger)
+
+  &.is-ghost-danger {
+    background-color: transparent;
+    border-color: $base-color-danger;
+    color: $base-color-danger;
+  }
+
+
+  // Ghost color (disabled)
+
+  &.is-ghost-disabled {
+    background-color: transparent;
+    border-color: $base-color-disabled;
+    color: $base-color-disabled;
+    cursor: not-allowed;
+  }
+
+
+  // Icon type
 
   &.is-icon {
     @include button-reset-styles();
@@ -189,7 +260,7 @@ $button-icon-size:  3em !default;
   }
 
 
-  // Type: Icon(picture)
+  // Icon(picture) type
 
   &.is-picture {
     @include button-reset-styles();
@@ -211,7 +282,7 @@ $button-icon-size:  3em !default;
   }
 
 
-  // Type: Burger icon
+  // Burger icon type
 
   &.is-burger {
     min-width: initial;
@@ -258,7 +329,7 @@ $button-icon-size:  3em !default;
   }
 
 
-  // Type: Close icon
+  // Close icon type
 
   &.is-close {
     min-width: initial;
@@ -301,7 +372,7 @@ $button-icon-size:  3em !default;
   }
 
 
-  // Type: Tag icon
+  // Tag icon type
 
   &.is-tag {
     line-height: 1;
@@ -312,7 +383,7 @@ $button-icon-size:  3em !default;
   }
 
 
-  // Type: List
+  // List type
 
   &.is-list {
     @include button-reset-styles();
@@ -335,7 +406,7 @@ $button-icon-size:  3em !default;
   }
 
 
-  // Type: Round
+  // Round type
 
   &.is-round {
     @include button-reset-styles();
@@ -350,7 +421,7 @@ $button-icon-size:  3em !default;
   }
 
 
-  // Size: full
+  // Display in full column
 
   &.is-col-full {
     width: 100%;
