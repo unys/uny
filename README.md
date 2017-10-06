@@ -29,7 +29,7 @@ or download [ZIP](https://github.com/unys/uny/archive/master.zip) file.
 
 In addition to downloading and loading CSS and JS files, you can easily start by using CDN.
 
-Add the following description in the `<head>` tag of the web page you want to use UNY.
+Please load the necessary file in the `<head>` tag.
 
 ```html
 <link rel="stylesheet" href="https://unpkg.com/uny@latest/dist/css/uny.min.css">
