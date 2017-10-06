@@ -186,7 +186,7 @@ $input-textarea-min-height: 6.25rem !default;
       padding: .5rem 2.5rem .5rem 1.25rem;
       background-color: transparent;
       position: relative;
-      z-index: 1;
+      z-index: 5999;
       cursor: pointer;
     }
   }

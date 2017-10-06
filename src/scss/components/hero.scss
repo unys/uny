@@ -26,7 +26,7 @@ $hero-color-background: $base-color-brand !default;
 
   & > *:not(.hero-image) {
     position: relative;
-    z-index: 1;
+    z-index: 5999;
   }
 
   p {
@@ -36,6 +36,8 @@ $hero-color-background: $base-color-brand !default;
   }
 
   .button {
+    border-color: transparent;
+
     & + .button {
       margin: 1.25rem 0 0;
 
