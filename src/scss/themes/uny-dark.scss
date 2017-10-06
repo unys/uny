@@ -4,122 +4,445 @@
 @import "../core/mixins.scss";
 
 //
-// Dark theme
+// Color scheme dark
 // -----------------------------------
 
 
-$base-color:       #263238 !default;
-$base-color-white: #fff !default;
+$theme-color-base:       #263238 !default;
+$theme-color-accent:     #607d8b !default;
+$theme-color-light:      #37474f !default;
+$theme-color-text:       #f2f2f2 !default;
+$theme-color-link:       #1976d2 !default;
+$theme-color-background: color($theme-color-text a(.1)) !default;
+
+$theme-gradation-color-start: $theme-color-base !default;
+$theme-gradation-color-end:   $theme-color-accent !default;
 
 
 //
-// Header, Footer
+// Core
 //
 
-.header,
-.footer {
-  background-color: $base-color !important;
-  color: $base-color-white !important;
+::-webkit-input-placeholder {
+  color: color($theme-color-text a(.3));
+}
+
+::-moz-placeholder {
+  color: color($theme-color-text a(.3));
+}
+
+:-ms-input-placeholder {
+  color: color($theme-color-text a(.3));
+}
+
+:-moz-placeholder {
+  color: color($theme-color-text a(.3));
+}
+
+a { color: $theme-color-link; }
+
+hr { background-color: $theme-color-light; }
+
+body {
+  background-color: $theme-color-base;
+  color: $theme-color-text;
+}
+
+
+//
+// Elements
+//
+
+pre {
+  &:before {
+    background-color: $theme-color-light;
+    color: $theme-color-text;
+  }
+
+  code {
+    border-color: $theme-color-light;
+    background-color: $theme-color-background;
+    color: $theme-color-text;
+  }
+}
+
+code {
+  background-color: $theme-color-background;
+}
+
+figure {
+  figcaption {
+    color: $theme-color-text;
+  }
+}
+
+.video {
+  .video-caption {
+    color: $theme-color-text;
+  }
+}
+
+.logo {
+  color: $theme-color-text;
 
   a {
-    &:not(.button) {
-      color: $base-color-white !important;
+    outline-color: $theme-color-link;
+    color: $theme-color-text;
+  }
+}
+
+.button {
+  background-color: $theme-color-accent;
+  border-color: $theme-color-accent;
+
+  &.is-burger,
+  &.is-close {
+    span {
+      background-color: $theme-color-text;
     }
-    &.is-current {
-      border-left-color: $base-color-white;
-      &:before {
-        background-color: $base-color-white;
+  }
+
+  &.is-list {
+    background-color: transparent;
+    color: $theme-color-text;
+
+    & + .button.is-list {
+      border-color: $theme-color-light;
+    }
+  }
+}
+
+table {
+  th {
+    border-color: $theme-color-light;
+  }
+
+  tr {
+    &:nth-child(even) {
+      td {
+        background-color: $theme-color-background;
       }
     }
   }
 }
 
+.input {
+  &:not(label) {
+    background-color: $theme-color-background;
+    border-color: transparent;
+    color: $theme-color-text;
 
-//
-// Main
-//
+    &:hover {
+      border-color: $theme-color-background;
+    }
 
-.main {
-  background-color: color($base-color a(.95));
-  color: white !important;
+    &:focus {
+      border-color: $theme-color-link;
+      box-shadow: 0 0 4px $theme-color-link;
+    }
+  }
+
+  &.is-file {
+    background-color: $theme-color-accent;
+    border-color: $theme-color-accent;
+    color: $theme-color-text;
+  }
+
+  &.is-select {
+    background-color: $theme-color-accent;
+
+    &:after {
+      color: $theme-color-text;
+    }
+
+    > select {
+      color: $theme-color-text;
+      border-color: $theme-color-accent;
+
+      &:focus {
+        border-color: $theme-color-link;
+        box-shadow: 0 0 4px $theme-color-link;
+      }
+    }
+  }
+
+  &.is-checkbox {
+    &:hover {
+      > span {
+        &:before {
+          border-color: $theme-color-accent;
+        }
+      }
+    }
+
+    > input[type=checkbox] {
+      &:checked {
+        & + span {
+          &:before {
+            background-color: $theme-color-accent;
+            border-color: $theme-color-accent;
+          }
+        }
+      }
+    }
+  }
+
+  &.is-radio {
+    &:hover {
+      > span {
+        &:before {
+          border-color: $theme-color-accent;
+        }
+      }
+    }
+
+    > input[type=radio] {
+      &:checked {
+        & + span {
+          &:before {
+            background-color: $theme-color-accent;
+            border-color: $theme-color-accent;
+          }
+        }
+      }
+    }
+  }
+}
+
+.input-filename {
+  color: color($theme-color-text a(.5));
+}
+
+.is-brand {
+  background-color: $theme-color-accent;
+}
+
+.is-gradation {
+  background: linear-gradient(270deg, $theme-gradation-color-start, $theme-gradation-color-end);
+  background-size: 200% 200%;
+  animation: isGradation 5s ease infinite;
+  color: $theme-color-text;
 
   a {
-    color: white !important;
+    color: $theme-color-text;
   }
+}
+
+@keyframes isGradation {
+  0%{
+    background-position: 0% 50%;
+  }
+  50%{
+    background-position: 100% 50%;
+  }
+  100%{
+    background-position: 0% 50%;
+  }
+}
+
+blockquote {
+  border-color: $theme-color-light;
 }
 
 
 //
-// Section
+// Components
 //
+
+.content {
+  background-color: $base-color;
+}
 
 .section {
-  &:nth-of-type(even) {
-    background-color: color($base-color a(.95)) !important;
+  & + .section {
+    border-top-color: $theme-color-light;
+  }
+
+  &.is-gray {
+    background-color: $theme-color-light;
   }
 }
 
-
-//
-// Card
-//
-
-.card {
-  border-color: color($base-color-white a(.1)) !important;
-  background-color: $base-color !important;
-  color: $base-color-white !important;
+.box {
+  &.is-border {
+    border-color: $theme-color-light;
+  }
 }
 
+.header,
+.footer {
+  background-color: $theme-color-light;
+}
 
-//
-// Tree
-//
+.header {
+  &.is-sticky {
+    background-color: $theme-color-light;
+  }
+}
+
+.header-menu {
+  a {
+    &:not(.button) {
+      color: $theme-color-text;
+    }
+  }
+}
+
+.card {
+  background-color: $theme-color-base;
+  border-color: $theme-color-accent;
+
+  &.is-clickable {
+    > * {
+      color: $theme-color-text;
+    }
+  }
+
+  &.is-skeleton {
+    border-color: $theme-color-light;
+
+    > * {
+      color: color($theme-color-text a(.3));
+    }
+  }
+}
+
+.offcanvas {
+  .offcanvas-content {
+    background-color: $theme-color-base;
+  }
+
+  .offcanvas-menu {
+    a:not(.button) {
+      color: $theme-color-text;
+    }
+  }
+}
+
+.sidebar {
+  &:first-child {
+    border-color: $theme-color-light;
+  }
+
+  &:not(:first-child) {
+    border-color: $theme-color-light;
+  }
+
+  @include screen-medium() {
+    &:first-child {
+      border-color: $theme-color-light;
+    }
+
+    &:not(:first-child) {
+      border-color: $theme-color-light;
+    }
+  }
+}
+
+.tab {
+  .tab-list {
+    border-color: $theme-color-light;
+
+    a {
+      background-color: $theme-color-base;
+      border-color: $theme-color-light;
+      color: $theme-color-text;
+
+      &.is-current {
+        color: $theme-color-link;
+      }
+    }
+  }
+  .tab-content {
+    border-color: $theme-color-light;
+  }
+}
+
+.navbar {
+  a {
+    &:not(.button) {
+      color: $theme-color-text;
+    }
+
+    &.is-current {
+      background-color: $theme-color-accent;
+    }
+  }
+}
 
 .tree {
   ul,
   ol {
     ul,
     ol {
-      border-left-color: color($base-color-white a(.1));
+      border-color: $theme-color-light;
     }
-  }
 
-  li {
-    &.is-current {
-      > a {
-        color: $base-color-white !important;
-        background-color: $base-color !important;
+    > li {
+      a {
+        color: $theme-color-text;
+      }
+
+      &.is-current {
+        > a {
+          background-color: $theme-color-accent;
+        }
       }
     }
   }
 }
 
+.hero {
+  background-color: $theme-color-light;
+}
 
-//
-// Code
-//
-
-pre {
-  code {
-    border-color: color($base-color-white a(.1));
+.field {
+  .button {
+    color: $theme-color-text;
+    background-color: $theme-color-accent;
+    border-color: $theme-color-accent;
   }
 }
 
-
-//
-// Hr
-//
-
-hr {
-  background-color: color($base-color-white a(.2));
+.snackbar {
+  background-color: $theme-color-accent;
 }
 
+.pulldown {
+  .pulldown-content {
+    background-color: $theme-color-base;
+    border: 1px solid $theme-color-light;
+  }
+}
 
-//
-// Button
-//
+.tabbar {
+  background-color: $theme-color-accent;
 
-.button {
-  background-color: $base-color !important;
-  border-color: color($base-color-white a(.1)) !important;
+  a {
+    &:not(.button) {
+      color: $theme-color-text;
+    }
+  }
+
+  .button.is-icon {
+    color: $theme-color-text;
+  }
+}
+
+.pager {
+  border-color: $theme-color-light;
+
+  > li {
+    > a {
+      border-color: $theme-color-light;
+      color: $theme-color-text;
+    }
+
+    > span {
+      &.is-current {
+        border-color: $theme-color-accent;
+        background-color: $theme-color-accent;
+      }
+    }
+  }
 }
