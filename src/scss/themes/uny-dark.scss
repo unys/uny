@@ -4,18 +4,18 @@
 @import "../core/mixins.scss";
 
 //
-// Dark theme
+// Color scheme dark
 // -----------------------------------
 
 
-$theme-color:            #263238 !default;
+$theme-color-base:       #263238 !default;
 $theme-color-accent:     #607d8b !default;
-$theme-color-border:     #37474f !default;
+$theme-color-light:      #37474f !default;
 $theme-color-text:       #f2f2f2 !default;
 $theme-color-link:       #1976d2 !default;
 $theme-color-background: color($theme-color-text a(.1)) !default;
 
-$theme-gradation-color-start: $theme-color !default;
+$theme-gradation-color-start: $theme-color-base !default;
 $theme-gradation-color-end:   $theme-color-accent !default;
 
 
@@ -41,10 +41,10 @@ $theme-gradation-color-end:   $theme-color-accent !default;
 
 a { color: $theme-color-link; }
 
-hr { background-color: $theme-color-border; }
+hr { background-color: $theme-color-light; }
 
 body {
-  background-color: $theme-color;
+  background-color: $theme-color-base;
   color: $theme-color-text;
 }
 
@@ -53,10 +53,40 @@ body {
 // Elements
 //
 
+pre {
+  &:before {
+    background-color: $theme-color-light;
+    color: $theme-color-text;
+  }
+
+  code {
+    border-color: $theme-color-light;
+    background-color: $theme-color-background;
+    color: $theme-color-text;
+  }
+}
+
+code {
+  background-color: $theme-color-background;
+}
+
+figure {
+  figcaption {
+    color: $theme-color-text;
+  }
+}
+
+.video {
+  .video-caption {
+    color: $theme-color-text;
+  }
+}
+
 .logo {
   color: $theme-color-text;
 
   a {
+    outline-color: $theme-color-link;
     color: $theme-color-text;
   }
 }
@@ -69,6 +99,29 @@ body {
   &.is-close {
     span {
       background-color: $theme-color-text;
+    }
+  }
+
+  &.is-list {
+    background-color: transparent;
+    color: $theme-color-text;
+
+    & + .button.is-list {
+      border-color: $theme-color-light;
+    }
+  }
+}
+
+table {
+  th {
+    border-color: $theme-color-light;
+  }
+
+  tr {
+    &:nth-child(even) {
+      td {
+        background-color: $theme-color-background;
+      }
     }
   }
 }
@@ -105,6 +158,11 @@ body {
     > select {
       color: $theme-color-text;
       border-color: $theme-color-accent;
+
+      &:focus {
+        border-color: $theme-color-link;
+        box-shadow: 0 0 4px $theme-color-link;
+      }
     }
   }
 
@@ -155,6 +213,10 @@ body {
   color: color($theme-color-text a(.5));
 }
 
+.is-brand {
+  background-color: $theme-color-accent;
+}
+
 .is-gradation {
   background: linear-gradient(270deg, $theme-gradation-color-start, $theme-gradation-color-end);
   background-size: 200% 200%;
@@ -179,7 +241,7 @@ body {
 }
 
 blockquote {
-  border-color: $theme-color-border;
+  border-color: $theme-color-light;
 }
 
 
@@ -193,22 +255,28 @@ blockquote {
 
 .section {
   & + .section {
-    border-top-color: $theme-color-border;
+    border-top-color: $theme-color-light;
   }
 
   &.is-gray {
-    background-color: $theme-color-border;
+    background-color: $theme-color-light;
+  }
+}
+
+.box {
+  &.is-border {
+    border-color: $theme-color-light;
   }
 }
 
 .header,
 .footer {
-  background-color: $theme-color-border;
+  background-color: $theme-color-light;
 }
 
 .header {
   &.is-sticky {
-    background-color: $theme-color-border;
+    background-color: $theme-color-light;
   }
 }
 
@@ -221,7 +289,7 @@ blockquote {
 }
 
 .card {
-  background-color: $theme-color;
+  background-color: $theme-color-base;
   border-color: $theme-color-accent;
 
   &.is-clickable {
@@ -231,7 +299,7 @@ blockquote {
   }
 
   &.is-skeleton {
-    border-color: $theme-color-border;
+    border-color: $theme-color-light;
 
     > * {
       color: color($theme-color-text a(.3));
@@ -241,7 +309,7 @@ blockquote {
 
 .offcanvas {
   .offcanvas-content {
-    background-color: $theme-color;
+    background-color: $theme-color-base;
   }
 
   .offcanvas-menu {
@@ -253,31 +321,31 @@ blockquote {
 
 .sidebar {
   &:first-child {
-    border-color: $theme-color-border;
+    border-color: $theme-color-light;
   }
 
   &:not(:first-child) {
-    border-color: $theme-color-border;
+    border-color: $theme-color-light;
   }
 
   @include screen-medium() {
     &:first-child {
-      border-color: $theme-color-border;
+      border-color: $theme-color-light;
     }
 
     &:not(:first-child) {
-      border-color: $theme-color-border;
+      border-color: $theme-color-light;
     }
   }
 }
 
 .tab {
   .tab-list {
-    border-color: $theme-color-border;
+    border-color: $theme-color-light;
 
     a {
-      background-color: $theme-color;
-      border-color: $theme-color-border;
+      background-color: $theme-color-base;
+      border-color: $theme-color-light;
       color: $theme-color-text;
 
       &.is-current {
@@ -286,7 +354,7 @@ blockquote {
     }
   }
   .tab-content {
-    border-color: $theme-color-border;
+    border-color: $theme-color-light;
   }
 }
 
@@ -307,7 +375,7 @@ blockquote {
   ol {
     ul,
     ol {
-      border-color: $theme-color-border;
+      border-color: $theme-color-light;
     }
 
     > li {
@@ -325,7 +393,7 @@ blockquote {
 }
 
 .hero {
-  background-color: $theme-color-accent;
+  background-color: $theme-color-light;
 }
 
 .field {
@@ -333,5 +401,48 @@ blockquote {
     color: $theme-color-text;
     background-color: $theme-color-accent;
     border-color: $theme-color-accent;
+  }
+}
+
+.snackbar {
+  background-color: $theme-color-accent;
+}
+
+.pulldown {
+  .pulldown-content {
+    background-color: $theme-color-base;
+    border: 1px solid $theme-color-light;
+  }
+}
+
+.tabbar {
+  background-color: $theme-color-accent;
+
+  a {
+    &:not(.button) {
+      color: $theme-color-text;
+    }
+  }
+
+  .button.is-icon {
+    color: $theme-color-text;
+  }
+}
+
+.pager {
+  border-color: $theme-color-light;
+
+  > li {
+    > a {
+      border-color: $theme-color-light;
+      color: $theme-color-text;
+    }
+
+    > span {
+      &.is-current {
+        border-color: $theme-color-accent;
+        background-color: $theme-color-accent;
+      }
+    }
   }
 }
