@@ -10,6 +10,7 @@ $hero-color-background: $base-color-brand !default;
   position: relative;
   background-color: $hero-color-background;
   padding: 3.75rem 1.25rem;
+  text-align: center;
 
   @include screen-medium() {
     padding: 5rem 2.5rem;
@@ -67,13 +68,6 @@ $hero-color-background: $base-color-brand !default;
     display: flex;
     flex-direction: column;
     justify-content: center;
-  }
-
-
-  // Align: Center
-
-  &.is-center {
-    text-align: center;
   }
 }
 
