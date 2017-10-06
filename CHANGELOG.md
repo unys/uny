@@ -1,3 +1,7 @@
+# v0.2.1 - 2017-10-06
+
+- Fix margin bug of `pre`
+
 # v0.2.0 - 2017-10-06
 
 - The theme is now available
@@ -19,7 +23,7 @@
 
 # v0.1.6 - 2017-10-03
 
-- Fix `.offcanvas` class a transition bug
+- Fix transition bug of `.offcanvas`
 
 # v0.1.0 - 2017-10-03
 
