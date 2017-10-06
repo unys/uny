@@ -58,5 +58,5 @@
 @mixin outline-focus() {
   border-color: $base-color-link;
   box-shadow: 0 0 4px $base-color-link;
-  z-index: 1;
+  z-index: 5999;
 }
