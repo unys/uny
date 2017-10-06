@@ -43,20 +43,21 @@
   <header class="header is-sticky">
     <h1 class="logo is-medium">UNY</h1>
     <nav class="header-menu">
-      <div class="pulldown">
-        <a href="javascript:void(0);">Language <i class="fa fa-angle-down"></i></a>
-        <div class="pulldown-content">
-          <a href="./" class="button is-list">English</a>
-          <a href="./index_ja.html" class="button is-list">日本語</a>
-        </div>
-      </div>
+      <a href="./demos/">Demos</a>
+      <a href="./theme.html">Theme</a>
       <div class="pulldown">
         <a href="javascript:void(0);">Document</a>
         <div class="pulldown-content">
           <p>Coming soon ;)</p>
         </div>
       </div>
-      <a href="./theme.html">Theme</a>
+      <div class="pulldown">
+        <a href="javascript:void(0);"><i class="fa fa-language"></i> Language</a>
+        <div class="pulldown-content">
+          <a href="./" class="button is-list">English</a>
+          <a href="./index_ja.html" class="button is-list">日本語</a>
+        </div>
+      </div>
       <a href="https://github.com/unys/uny" class="button is-white is-small"><i class="fa fa-github"></i> GitHub</a>
       <a href="https://github.com/unys/uny/archive/master.zip" class="button is-small"><i class="fa fa-download"></i> Download</a>
     </nav>
@@ -170,11 +171,11 @@
           <h2><i class="fa fa-bolt"></i> Quick start</h2>
           <h3>Using CDN</h3>
           <p>In addition to downloading and loading CSS and JS files, <br>you can easily start by using CDN.</p>
-          <p>Add the following description in the <code>&lt;head&gt;</code> tag of the web page you want to use UNY.</p>
-          <pre><code class="html">&lt;link rel="stylesheet" href="https://unpkg.com/uny@latest/dist/css/uny.min.css"&gt;
+          <p>Please load the necessary file in the <code>&lt;head&gt;</code> tag.</p>
+          <pre data-syntax="html"><code class="html">&lt;link rel="stylesheet" href="https://unpkg.com/uny@latest/dist/css/uny.min.css"&gt;
 &lt;script src="https://unpkg.com/uny@latest/dist/js/uny.min.js"&gt;&lt;/script&gt;</code></pre>
           <p>Write the HTML tag of the component you want to use.</p>
-          <pre><code class="html">&lt;div class="card"&gt;
+          <pre data-syntax="html"><code class="html">&lt;div class="card"&gt;
   &lt;div class="card-image" style="background-image: url(https://source.unsplash.com/random);"&gt;&lt;/div&gt;
   &lt;h3&gt;Heading&lt;/h3&gt;
   &lt;p&gt;Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae, debitis.&lt;/p&gt;
@@ -224,9 +225,12 @@
       </button>
       <div class="inner">
         <div class="offcanvas-menu">
-          <a class="is-current" href="./">English</a>
-          <a href="./index_ja.html">日本語</a>
+          <a href="./demos/">Demos</a>
           <a href="./theme.html">Theme</a>
+          <hr>
+          <a href="./">English</a>
+          <a href="./index_ja.html">日本語</a>
+          <hr>
           <hr>
           <a href="https://github.com/unys/uny" class="button is-white is-small"><i class="fa fa-github"></i> GitHub</a>
           <a href="https://github.com/unys/uny/archive/master.zip" class="button is-small"><i class="fa fa-download"></i> Download</a>

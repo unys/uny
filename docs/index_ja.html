@@ -43,20 +43,21 @@
   <header class="header is-sticky">
     <h1 class="logo is-medium">UNY</h1>
     <nav class="header-menu">
-      <div class="pulldown">
-        <a href="javascript:void(0);">言語 <i class="fa fa-angle-down"></i></a>
-        <div class="pulldown-content">
-          <a href="./" class="button is-list">English</a>
-          <a href="./index_ja.html" class="button is-list">日本語</a>
-        </div>
-      </div>
+      <a href="./demos/">動作デモ</a>
+      <a href="./theme.html">拡張テーマ</a>
       <div class="pulldown">
         <a href="javascript:void(0);">ドキュメント</a>
         <div class="pulldown-content">
           <p>準備中</p>
         </div>
       </div>
-      <a href="./theme.html">拡張テーマ</a>
+      <div class="pulldown">
+        <a href="javascript:void(0);"><i class="fa fa-language"></i> 言語</a>
+        <div class="pulldown-content">
+          <a href="./" class="button is-list">English</a>
+          <a href="./index_ja.html" class="button is-list">日本語</a>
+        </div>
+      </div>
       <a href="https://github.com/unys/uny" class="button is-white is-small"><i class="fa fa-github"></i> GitHub</a>
       <a href="https://github.com/unys/uny/archive/master.zip" class="button is-small"><i class="fa fa-download"></i> ダウンロード</a>
     </nav>
@@ -170,11 +171,11 @@
           <h2><i class="fa fa-bolt"></i> クイックスタート</h2>
           <h3>CDNの利用</h3>
           <p>ダウンロードしてCSS、JSファイルを読み込ませる方法以外にも、<br>CDNを利用することで簡単に始めることができます。</p>
-          <p>UNYを利用したいWebページの <code>&lt;head&gt;</code> タグ内に下記の記述を追記します。</p>
-          <pre><code class="html">&lt;link rel="stylesheet" href="https://unpkg.com/uny@latest/dist/uny.min.css"&gt;
+          <p>必要なファイルを <code>&lt;head&gt;</code> タグの中で読み込ませてください。</p>
+          <pre data-syntax="html"><code class="html">&lt;link rel="stylesheet" href="https://unpkg.com/uny@latest/dist/uny.min.css"&gt;
 &lt;script src="https://unpkg.com/uny@latest/dist/uny.min.js"&gt;&lt;/script&gt;</code></pre>
           <p>利用したいコンポーネントのHTMLタグを記述します。</p>
-          <pre><code class="html">&lt;div class="card"&gt;
+          <pre data-syntax="html"><code class="html">&lt;div class="card"&gt;
   &lt;div class="card-image" style="background-image: url(https://source.unsplash.com/random);"&gt;&lt;/div&gt;
   &lt;h3&gt;Heading&lt;/h3&gt;
   &lt;p&gt;Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae, debitis.&lt;/p&gt;
@@ -224,9 +225,11 @@
       </button>
       <div class="inner">
         <div class="offcanvas-menu">
+          <a href="./demos/">動作デモ</a>
+          <a href="./theme.html">拡張テーマ</a>
+          <hr>
           <a href="./">English</a>
-          <a class="is-current" href="./index_ja.html">日本語</a>
-          <a href="./theme.html">Theme</a>
+          <a href="./index_ja.html">日本語</a>
           <hr>
           <a href="https://github.com/unys/uny" class="button is-white is-small"><i class="fa fa-github"></i> GitHub</a>
           <a href="https://github.com/unys/uny/archive/master.zip" class="button is-small"><i class="fa fa-download"></i> ダウンロード</a>
