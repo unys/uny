@@ -36,7 +36,9 @@ $hero-color-background: $base-color-brand !default;
   }
 
   .button {
-    border-color: transparent;
+    &:not([class*=is-ghost]) {
+      border-color: transparent;
+    }
 
     & + .button {
       margin: 1.25rem 0 0;
@@ -71,6 +73,21 @@ $hero-color-background: $base-color-brand !default;
     flex-direction: column;
     justify-content: center;
   }
+
+
+  // Image only
+
+  &.is-image-only {
+    height: 280px;
+
+    @include screen-medium() {
+      height: 480px;
+    }
+
+    @include screen-large() {
+      height: 560px;
+    }
+  }
 }
 
 
@@ -98,5 +115,9 @@ $hero-color-background: $base-color-brand !default;
     width: 100%;
     height: 100%;
     background-color: rgba(0,0,0,.5);
+
+    .is-image-only & {
+      display: none;
+    }
   }
 }
