@@ -1,3 +1,8 @@
+# v0.2.1 - 2017-10-10
+
+- Add `.hero.is-image-only` style
+- Update `picture`, `video` elements styles
+
 # v0.2.1 - 2017-10-06
 
 - Fix margin bug of `pre`
