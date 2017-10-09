@@ -1,4 +1,4 @@
-# v0.2.1 - 2017-10-10
+# v0.2.2 - 2017-10-10
 
 - Add `.hero.is-image-only` style
 - Update `picture`, `video` elements styles
