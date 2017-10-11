@@ -22,7 +22,7 @@ $card-skeleton-border: 2px dashed $base-color-button-border !default;
   overflow: hidden;
 
 
-  // Type: Clickable
+  // Clickable type
 
   &.is-clickable {
     padding: 0;
@@ -39,7 +39,7 @@ $card-skeleton-border: 2px dashed $base-color-button-border !default;
   }
 
 
-  // Type: Skeleton
+  // Skeleton type
 
   &.is-skeleton {
     border: $card-skeleton-border;
@@ -47,6 +47,45 @@ $card-skeleton-border: 2px dashed $base-color-button-border !default;
 
     > * {
       color: color($base-color-text a(.5));
+    }
+  }
+
+
+  // Dialog type
+
+  &.is-dialog {
+    padding: 0;
+
+    .card-header {
+      margin: 0;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid $base-color-border;
+      text-align: center;
+    }
+
+    .card-content {
+      padding: 1.5rem 2rem;
+    }
+
+    .card-footer {
+      display: flex;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+
+      .button {
+        flex: 1;
+        margin: 0;
+        border: 0;
+        border-radius: 0;
+        background-color: transparent;
+        border-top: 1px solid $base-color-border;
+        color: $base-color-link;
+
+        &:not(:first-child) {
+          border-left: 1px solid $base-color-border;
+        }
+      }
     }
   }
 
@@ -82,6 +121,13 @@ $card-skeleton-border: 2px dashed $base-color-button-border !default;
   &.is-col-full {
     max-width: 100%;
   }
+
+
+  // Layout mode
+
+  &.is-layout {
+    padding: 0;
+  }
 }
 
 
@@ -101,3 +147,14 @@ $card-skeleton-border: 2px dashed $base-color-button-border !default;
     margin-top: 2.5rem !important;
   }
 }
+
+
+//
+// Card layout
+//
+
+.card-header {}
+
+.card-content {}
+
+.card-footer {}

@@ -1,0 +1,75 @@
+//
+// Modal
+// -----------------------------------
+
+
+$modal-color-background:      #fff !default;
+$modal-content-margin:        1.25rem !default;
+$modal-content-margin-medium: 2rem !default;
+$modal-content-inner-margin:  2.5rem $modal-content-margin-medium !default;
+
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 25999;
+  opacity: 0;
+  visibility: hidden;
+  transition: .25s all ease;
+
+  &.is-active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+
+.modal-content {
+  position: relative;
+  z-index: 5999;
+  padding: 0 $modal-content-margin;
+
+  @include screen-medium() {
+    padding: 0 $modal-content-margin-medium;
+  }
+
+  > .inner {
+    padding: $modal-content-inner-margin;
+    background-color: $modal-color-background;
+    border-radius: $base-border-radius;
+  }
+
+  > .card {
+    border: 0;
+  }
+
+  .button.is-close {
+    position: absolute;
+    top: -40px;
+    right: $modal-content-margin;
+
+    @include screen-medium() {
+      right: $modal-content-margin-medium;
+    }
+
+    span {
+      background-color: $modal-color-background;
+    }
+  }
+}
+
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: color(#000 a(.5));
+  width: 100%;
+  height: 100%;
+}
