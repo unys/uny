@@ -1,3 +1,12 @@
+# v0.2.4 - 2017-10-12
+
+- Add dark theme of `.modal`
+
+# v0.2.3 - 2017-10-11
+
+- Add `.modal` style
+- Add `.card.is-dialog` style
+
 # v0.2.2 - 2017-10-10
 
 - Add `.hero.is-image-only` style
