@@ -309,6 +309,14 @@ blockquote {
       color: color($theme-color-text a(.3));
     }
   }
+
+  &.is-dialog {
+    .card-header,
+    .card-content,
+    .card-footer {
+      border-color: $theme-color-light;
+    }
+  }
 }
 
 .offcanvas {
@@ -446,6 +454,23 @@ blockquote {
       &.is-current {
         border-color: $theme-color-accent;
         background-color: $theme-color-accent;
+      }
+    }
+  }
+}
+
+.modal {
+  .modal-content {
+    > .inner {
+      background-color: $theme-color-base;
+    }
+    > .card.is-dialog {
+      .button {
+        color: $theme-color-link;
+
+        & + .button {
+          border-color: $theme-color-light;
+        }
       }
     }
   }
