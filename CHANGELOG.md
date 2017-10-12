@@ -1,3 +1,7 @@
+# v0.2.5 - 2017-10-12
+
+- Fix an issue that can not be included from node_modules
+
 # v0.2.4 - 2017-10-12
 
 - Add dark theme of `.modal`
