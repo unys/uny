@@ -72,6 +72,7 @@ $card-skeleton-border: 2px dashed $base-color-button-border !default;
       align-items: center;
       margin: 0;
       padding: 0;
+      border-top: 1px solid $base-color-border;
 
       .button {
         flex: 1;
@@ -79,7 +80,6 @@ $card-skeleton-border: 2px dashed $base-color-button-border !default;
         border: 0;
         border-radius: 0;
         background-color: transparent;
-        border-top: 1px solid $base-color-border;
         color: $base-color-link;
 
         &:not(:first-child) {
