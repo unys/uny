@@ -1,8 +1,9 @@
-# v0.2.7 - 2017-10-19
+# v0.2.8 - 2017-10-19
 
-- Fix snackbar styles
+- Add `.input[disabled]` styles
+- Add `.button[disabled]` styles
+- Fix `.snackbar` styles
 - Fix `.is-gradation > .button` styles
-- Fix `.button[disabled]` styles
 
 # v0.2.5 - 2017-10-12
 
