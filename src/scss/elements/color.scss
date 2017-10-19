@@ -107,6 +107,12 @@ $gradation-color-end:   #ffa000 !default;
   a {
     color: #fff;
   }
+
+  .button {
+    &:not([class*=is-ghost]) {
+      border-color: transparent;
+    }
+  }
 }
 
 @keyframes isGradation {
