@@ -33,6 +33,10 @@ $snackbar-border-radius: $base-border-radius-small !default;
     border-color: $base-color-border;
     color: $base-color-text;
     box-shadow: $snackbar-shadow;
+
+    a {
+      color: $base-color-text;
+    }
   }
 
 
@@ -65,6 +69,10 @@ $snackbar-border-radius: $base-border-radius-small !default;
   &.is-success {
     background-color: $base-color-success;
     color: $base-color-text;
+
+    a {
+      color: $base-color-text;
+    }
   }
 
 
@@ -81,6 +89,10 @@ $snackbar-border-radius: $base-border-radius-small !default;
   &.is-warning {
     background-color: $base-color-warning;
     color: $base-color-text;
+
+    a {
+      color: $base-color-text;
+    }
   }
 
 
