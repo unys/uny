@@ -141,6 +141,7 @@ $button-icon-size:  3em !default;
 
   // Disabled color
 
+  &[disabled],
   &.is-disabled {
     color: $base-color-disabled;
     background-color: $base-color-light;
