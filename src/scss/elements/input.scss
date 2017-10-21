@@ -42,6 +42,19 @@ $input-textarea-min-height: 6.25rem !default;
   }
 
 
+  // Disabled
+  &[disabled],
+  &.is-disabled {
+    color: $base-color-disabled;
+    background-color: $base-color-light;
+    border-color: $base-color-border;
+    cursor: not-allowed;
+
+    &:hover {
+      border-color: transparent;
+    }
+  }
+
   // Checkbox
 
   &.is-checkbox {

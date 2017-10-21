@@ -1,3 +1,10 @@
+# v0.2.8 - 2017-10-19
+
+- Add `.input[disabled]` styles
+- Add `.button[disabled]` styles
+- Fix `.snackbar` styles
+- Fix `.is-gradation > .button` styles
+
 # v0.2.5 - 2017-10-12
 
 - Fix an issue that can not be included from node_modules
