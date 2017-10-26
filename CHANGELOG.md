@@ -1,3 +1,7 @@
+# v0.2.9 - 2017-10-26
+
+- Fix(security): prevent XSS (Thank you @isoden)
+
 # v0.2.8 - 2017-10-19
 
 - Add `.input[disabled]` styles
