@@ -3,6 +3,7 @@
 // -----------------------------------
 
 import Uny from '../core/core';
+import { escapeHTML } from '../utils';
 
 class Input extends Uny {
   constructor() {
@@ -29,9 +30,9 @@ class Input extends Uny {
     const fileName = element.getElementsByTagName('input')[0].files[0].name;
 
     if (element.getElementsByClassName('input-filename').length === 0) {
-      element.innerHTML += `<div class="input-filename">${fileName}</div>`;
+      element.insertAdjacentHTML('beforeend', escapeHTML`<div class="input-filename">${fileName}</div>`);
     } else {
-      element.getElementsByClassName('input-filename')[0].innerHTML = fileName;
+      element.getElementsByClassName('input-filename')[0].textContent = fileName;
     }
   }
 }
