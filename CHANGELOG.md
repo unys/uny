@@ -1,6 +1,6 @@
 # v0.2.9 - 2017-10-26
 
-- Fix(security): prevent XSS (Thank you @isoden)
+- Fix(security): prevent XSS (Thank you [@isoden](https://github.com/isoden))
 
 # v0.2.8 - 2017-10-19
 
