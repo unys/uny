@@ -45,6 +45,7 @@ $field-button-border:  1px solid $base-color-button-border;
     padding: $field-button-padding;
     color: $base-color-text;
     background-color: transparent;
+    white-space: nowrap;
 
     & + .button {
       margin-left: -1px;

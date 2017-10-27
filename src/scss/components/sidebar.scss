@@ -4,7 +4,7 @@
 
 
 $sidebar-min-width: 240px !default;
-$sidebar-max-width: 480px !default;
+$sidebar-max-width: 420px !default;
 $sidebar-font-size: $base-font-size-small !default;
 $sidebar-sticky-offset-top: 2.5rem !default;
 
@@ -67,6 +67,16 @@ $sidebar-sticky-offset-top: 2.5rem !default;
       @include screen-large() {
         top: calc(4.75rem + $sidebar-sticky-offset-top);
       }
+    }
+  }
+}
+
+.sidebar-content {
+  & + .sidebar-content {
+    margin-top: 3rem;
+
+    @include screen-medium() {
+      margin-top: 3.75rem;
     }
   }
 }
