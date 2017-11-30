@@ -3,8 +3,9 @@
 // -----------------------------------
 
 
-$field-button-padding: .5rem 1.25rem;
-$field-button-border:  1px solid $base-color-button-border;
+$field-button-padding: .5rem 1.25rem !default;
+$field-button-border : 1px solid $base-color-button-border !default;
+
 
 
 .field {

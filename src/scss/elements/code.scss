@@ -3,10 +3,10 @@
 // -----------------------------------
 
 
-$code-padding:          .25rem;
-$pre-padding:           1.5rem;
-$pre-border:            1px solid $base-color-border;
-$code-color-background: $base-color-light;
+$code-padding:          .25rem !default;
+$pre-padding:           1.5rem !default;
+$pre-border:            1px solid $base-color-border !default;
+$code-color-background: $base-color-light !default;
 
 
 code {

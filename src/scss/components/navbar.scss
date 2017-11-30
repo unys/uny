@@ -3,10 +3,10 @@
 // -----------------------------------
 
 
-$navbar-max-width: 40%;
-$navbar-shadow: $base-shadow;
-$navbar-black-color-background: #000;
-$navbar-black-color-current: color(#fff a(.2));
+$navbar-max-width: 40% !default;
+$navbar-shadow: $base-shadow !default;
+$navbar-black-color-background: #000 !default;
+$navbar-black-color-current: color(#fff a(.2)) !default;
 
 
 .navbar {

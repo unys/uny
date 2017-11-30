@@ -3,10 +3,10 @@
 // -----------------------------------
 
 
-$tab-border:                   1px solid $base-color-button-border;
-$tab-border-radius:            $base-border-radius-small;
-$tab-color-background-current: #fff;
-$tab-color-text-current:       $base-color-brand;
+$tab-border:                   1px solid $base-color-button-border !default;
+$tab-border-radius:            $base-border-radius-small !default;
+$tab-color-background-current: #fff !default;
+$tab-color-text-current:       $base-color-brand !default;
 
 
 //

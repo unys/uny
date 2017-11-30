@@ -3,12 +3,12 @@
 // -----------------------------------
 
 
-$footer-margin:              5rem 1.25rem;
-$footer-margin-medium:       5rem 2.5rem;
-$footer-margin-large:        5rem;
+$footer-margin:              5rem 1.25rem !default;
+$footer-margin-medium:       5rem 2.5rem !default;
+$footer-margin-large:        5rem !default;
 $footer-font-size-text:      $base-font-size !default;
 $footer-font-size-copyright: $base-font-size-small !default;
-$footer-color-background:    #fff;
+$footer-color-background:    #fff !default;
 
 
 .footer {
