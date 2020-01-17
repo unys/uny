@@ -59,7 +59,8 @@ View on [CHANGELOG.md](https://github.com/unys/uny/blob/master/CHANGELOG.md)
 
 ## Contributor
 
-[@kokushin](https://github.com/kokushin)
+[@kokushin](https://github.com/kokushin)  
+[@steelydylan](https://github.com/steelydylan)
 
 ## License
 
