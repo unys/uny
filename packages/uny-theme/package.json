@@ -7,6 +7,9 @@
   "license": "MIT",
   "main": "dist/css/uny.min.css",
   "style": "dist/css/uny.min.css",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "dev:css": "opener tests/index.html && postcss src/scss/*.scss -d docs/css -x css -w",
     "build:css": "NODE_ENV=production postcss src/scss/*.scss -d dist/css -x .min.css",

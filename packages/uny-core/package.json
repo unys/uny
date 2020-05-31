@@ -7,6 +7,9 @@
   "license": "MIT",
   "main": "dist/css/uny.min.css",
   "style": "dist/css/uny.min.css",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "dev:css": "opener tests/index.html && postcss src/scss/uny.scss -o docs/css/uny.css -w",
     "dev:js": "opener tests/js/index.html && rollup src/js/uny.js -o docs/js/uny.js -f iife -m inline -c -w",
