@@ -9,12 +9,10 @@
   "style": "dist/css/uny.min.css",
   "scripts": {
     "dev:css": "opener tests/index.html && postcss src/scss/uny.scss -o docs/css/uny.css -w",
-    "dev:theme": "opener tests/theme/index.html && postcss src/scss/themes/*.scss -d docs/css -x css -w",
     "dev:js": "opener tests/js/index.html && rollup src/js/uny.js -o docs/js/uny.js -f iife -m inline -c -w",
     "build:css": "NODE_ENV=production postcss src/scss/uny.scss -o dist/css/uny.min.css",
-    "build:theme": "NODE_ENV=production postcss src/scss/themes/*.scss -d dist/css -x .min.css",
     "build:js": "NODE_ENV=production rollup src/js/uny.js -o dist/js/uny.min.js -f iife -c",
-    "build": "postcss src/scss/uny.scss -o docs/css/uny.css && postcss src/scss/themes/*.scss -d docs/css -x css && npm run build:css && npm run build:theme && npm run build:js",
+    "build": "postcss src/scss/uny.scss -o docs/css/uny.css && npm run build:css && npm run build:js",
     "server": "http-server ./docs",
     "deploy": "npm run build && np --no-cleanup"
   },

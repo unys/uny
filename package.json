@@ -61,6 +61,7 @@
     "rollup-plugin-uglify": "^2.0.1"
   },
   "dependencies": {
-    "lerna": "^3.22.0"
+    "lerna": "^3.22.0",
+    "postcss-import": "^12.0.1"
   }
 }
