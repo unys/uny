@@ -30,7 +30,8 @@
     "nohoist": []
   },
   "scripts": {
-    "build": "lerna run build --parallel --stream --scope=@uny/**"
+    "build": "lerna run build --parallel --stream --scope=@uny/**",
+    "publish": "npm run build && learna publish"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.3",
