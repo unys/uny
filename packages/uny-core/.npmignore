@@ -1,0 +1,5 @@
+docs/*
+tests/*
+rollup.config.js
+.gitignore
+postcss.config.js
